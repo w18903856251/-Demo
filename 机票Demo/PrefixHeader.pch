@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  
+//
+//  Created by 吴宇 on 16/3/3.
+//
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define debugLog(...) NSLog(__VA_ARGS__)
+#import "APIConfig.h"
+#import "UIColor+HexString.h"
+//获取屏幕宽高
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

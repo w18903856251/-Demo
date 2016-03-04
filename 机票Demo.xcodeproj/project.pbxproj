@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29257439DC23D2B8ABA9591D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A715D80CC03760D23CCE06C0 /* libPods.a */; };
+		FEB549C41C89291900F7DFD7 /* SearchTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549C31C89291900F7DFD7 /* SearchTicketViewController.m */; };
+		FEB549C71C892EC300F7DFD7 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549C61C892EC300F7DFD7 /* UIColor+HexString.m */; };
+		FEB549CF1C89665000F7DFD7 /* HYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549CE1C89665000F7DFD7 /* HYSegmentedControl.m */; };
+		FEB549D21C897FC300F7DFD7 /* Conversionofweek.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549D11C897FC300F7DFD7 /* Conversionofweek.m */; };
+		FEDBA7531C87CCD900D1EF64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7521C87CCD900D1EF64 /* main.m */; };
+		FEDBA7561C87CCD900D1EF64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7551C87CCD900D1EF64 /* AppDelegate.m */; };
+		FEDBA7591C87CCD900D1EF64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7581C87CCD900D1EF64 /* ViewController.m */; };
+		FEDBA75C1C87CCD900D1EF64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDBA75A1C87CCD900D1EF64 /* Main.storyboard */; };
+		FEDBA75E1C87CCD900D1EF64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDBA75D1C87CCD900D1EF64 /* Assets.xcassets */; };
+		FEDBA7611C87CCD900D1EF64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDBA75F1C87CCD900D1EF64 /* LaunchScreen.storyboard */; };
+		FEDBA76C1C87CCD900D1EF64 /* __DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA76B1C87CCD900D1EF64 /* __DemoTests.m */; };
+		FEDBA7771C87CCD900D1EF64 /* __DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7761C87CCD900D1EF64 /* __DemoUITests.m */; };
+		FEDBA7891C87D90E00D1EF64 /* RTHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7881C87D90E00D1EF64 /* RTHttpClient.m */; };
+		FEDBA78D1C87DE7D00D1EF64 /* Publicrequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA78C1C87DE7D00D1EF64 /* Publicrequest.m */; };
+		FEDBA7901C87E10F00D1EF64 /* TicketListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA78F1C87E10F00D1EF64 /* TicketListViewController.m */; };
+		FEDBA7931C88070300D1EF64 /* TicketListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7921C88070300D1EF64 /* TicketListEntity.m */; };
+		FEDBA7961C881AD900D1EF64 /* BaseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7951C881AD900D1EF64 /* BaseHandler.m */; };
+		FEDBA79C1C88207700D1EF64 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA79B1C88207700D1EF64 /* ListTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FEDBA7681C87CCD900D1EF64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEDBA7461C87CCD900D1EF64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEDBA74D1C87CCD900D1EF64;
+			remoteInfo = "机票Demo";
+		};
+		FEDBA7731C87CCD900D1EF64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEDBA7461C87CCD900D1EF64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEDBA74D1C87CCD900D1EF64;
+			remoteInfo = "机票Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A5FE8D763D18DE5FD29C0DD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		499662CD6D38D4DDB5CDFF20 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A715D80CC03760D23CCE06C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEB549C21C89291900F7DFD7 /* SearchTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTicketViewController.h; path = ../SearchTicketViewController.h; sourceTree = "<group>"; };
+		FEB549C31C89291900F7DFD7 /* SearchTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTicketViewController.m; path = ../SearchTicketViewController.m; sourceTree = "<group>"; };
+		FEB549C51C892EC300F7DFD7 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../UIColor+HexString.h"; sourceTree = "<group>"; };
+		FEB549C61C892EC300F7DFD7 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "../UIColor+HexString.m"; sourceTree = "<group>"; };
+		FEB549CD1C89665000F7DFD7 /* HYSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYSegmentedControl.h; sourceTree = "<group>"; };
+		FEB549CE1C89665000F7DFD7 /* HYSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYSegmentedControl.m; sourceTree = "<group>"; };
+		FEB549D01C897FC300F7DFD7 /* Conversionofweek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversionofweek.h; sourceTree = "<group>"; };
+		FEB549D11C897FC300F7DFD7 /* Conversionofweek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversionofweek.m; sourceTree = "<group>"; };
+		FEDBA74E1C87CCD900D1EF64 /* 机票Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "机票Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEDBA7521C87CCD900D1EF64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FEDBA7541C87CCD900D1EF64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FEDBA7551C87CCD900D1EF64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FEDBA7571C87CCD900D1EF64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FEDBA7581C87CCD900D1EF64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FEDBA75B1C87CCD900D1EF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FEDBA75D1C87CCD900D1EF64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FEDBA7601C87CCD900D1EF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FEDBA7621C87CCD900D1EF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDBA7671C87CCD900D1EF64 /* 机票DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "机票DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEDBA76B1C87CCD900D1EF64 /* __DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __DemoTests.m; sourceTree = "<group>"; };
+		FEDBA76D1C87CCD900D1EF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDBA7721C87CCD900D1EF64 /* 机票DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "机票DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEDBA7761C87CCD900D1EF64 /* __DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __DemoUITests.m; sourceTree = "<group>"; };
+		FEDBA7781C87CCD900D1EF64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDBA7851C87D38700D1EF64 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FEDBA7871C87D90700D1EF64 /* RTHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTHttpClient.h; sourceTree = "<group>"; };
+		FEDBA7881C87D90E00D1EF64 /* RTHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTHttpClient.m; sourceTree = "<group>"; };
+		FEDBA78A1C87D9CF00D1EF64 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		FEDBA78B1C87DE7D00D1EF64 /* Publicrequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publicrequest.h; sourceTree = "<group>"; };
+		FEDBA78C1C87DE7D00D1EF64 /* Publicrequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publicrequest.m; sourceTree = "<group>"; };
+		FEDBA78E1C87E10F00D1EF64 /* TicketListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicketListViewController.h; path = ../TicketListViewController.h; sourceTree = "<group>"; };
+		FEDBA78F1C87E10F00D1EF64 /* TicketListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TicketListViewController.m; path = ../TicketListViewController.m; sourceTree = "<group>"; };
+		FEDBA7911C88070300D1EF64 /* TicketListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicketListEntity.h; path = ../TicketListEntity.h; sourceTree = "<group>"; };
+		FEDBA7921C88070300D1EF64 /* TicketListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TicketListEntity.m; path = ../TicketListEntity.m; sourceTree = "<group>"; };
+		FEDBA7941C881AD900D1EF64 /* BaseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseHandler.h; path = ../BaseHandler.h; sourceTree = "<group>"; };
+		FEDBA7951C881AD900D1EF64 /* BaseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseHandler.m; path = ../BaseHandler.m; sourceTree = "<group>"; };
+		FEDBA79A1C88207700D1EF64 /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewCell.h; path = ../ListTableViewCell.h; sourceTree = "<group>"; };
+		FEDBA79B1C88207700D1EF64 /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewCell.m; path = ../ListTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEDBA74B1C87CCD900D1EF64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29257439DC23D2B8ABA9591D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEDBA7641C87CCD900D1EF64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEDBA76F1C87CCD900D1EF64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7ACFBBB16CD44B9191041F9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A5FE8D763D18DE5FD29C0DD /* Pods.debug.xcconfig */,
+				499662CD6D38D4DDB5CDFF20 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5EDB217B06A164F96FEAACB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A715D80CC03760D23CCE06C0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEB549C81C8962B000F7DFD7 /* Air tickets Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA78E1C87E10F00D1EF64 /* TicketListViewController.h */,
+				FEDBA78F1C87E10F00D1EF64 /* TicketListViewController.m */,
+				FEB549C21C89291900F7DFD7 /* SearchTicketViewController.h */,
+				FEB549C31C89291900F7DFD7 /* SearchTicketViewController.m */,
+			);
+			path = "Air tickets Controller";
+			sourceTree = "<group>";
+		};
+		FEB549C91C8962F700F7DFD7 /* Air tickets Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA79A1C88207700D1EF64 /* ListTableViewCell.h */,
+				FEDBA79B1C88207700D1EF64 /* ListTableViewCell.m */,
+			);
+			path = "Air tickets Cell";
+			sourceTree = "<group>";
+		};
+		FEB549CA1C89631D00F7DFD7 /* Air tickets Model */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA7911C88070300D1EF64 /* TicketListEntity.h */,
+				FEDBA7921C88070300D1EF64 /* TicketListEntity.m */,
+			);
+			path = "Air tickets Model";
+			sourceTree = "<group>";
+		};
+		FEB549CC1C89639700F7DFD7 /* My wrapper class */ = {
+			isa = PBXGroup;
+			children = (
+				FEB549CD1C89665000F7DFD7 /* HYSegmentedControl.h */,
+				FEB549CE1C89665000F7DFD7 /* HYSegmentedControl.m */,
+				FEB549C61C892EC300F7DFD7 /* UIColor+HexString.m */,
+				FEB549C51C892EC300F7DFD7 /* UIColor+HexString.h */,
+				FEDBA7941C881AD900D1EF64 /* BaseHandler.h */,
+				FEDBA7951C881AD900D1EF64 /* BaseHandler.m */,
+				FEB549D01C897FC300F7DFD7 /* Conversionofweek.h */,
+				FEB549D11C897FC300F7DFD7 /* Conversionofweek.m */,
+			);
+			path = "My wrapper class";
+			sourceTree = "<group>";
+		};
+		FEDBA7451C87CCD900D1EF64 = {
+			isa = PBXGroup;
+			children = (
+				FEDBA7501C87CCD900D1EF64 /* 机票Demo */,
+				FEDBA76A1C87CCD900D1EF64 /* 机票DemoTests */,
+				FEDBA7751C87CCD900D1EF64 /* 机票DemoUITests */,
+				FEDBA74F1C87CCD900D1EF64 /* Products */,
+				7ACFBBB16CD44B9191041F9D /* Pods */,
+				B5EDB217B06A164F96FEAACB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FEDBA74F1C87CCD900D1EF64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA74E1C87CCD900D1EF64 /* 机票Demo.app */,
+				FEDBA7671C87CCD900D1EF64 /* 机票DemoTests.xctest */,
+				FEDBA7721C87CCD900D1EF64 /* 机票DemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEDBA7501C87CCD900D1EF64 /* 机票Demo */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA7541C87CCD900D1EF64 /* AppDelegate.h */,
+				FEDBA7551C87CCD900D1EF64 /* AppDelegate.m */,
+				FEDBA7571C87CCD900D1EF64 /* ViewController.h */,
+				FEDBA7581C87CCD900D1EF64 /* ViewController.m */,
+				FEB549C81C8962B000F7DFD7 /* Air tickets Controller */,
+				FEB549C91C8962F700F7DFD7 /* Air tickets Cell */,
+				FEB549CA1C89631D00F7DFD7 /* Air tickets Model */,
+				FEB549CC1C89639700F7DFD7 /* My wrapper class */,
+				FEDBA7861C87D8EF00D1EF64 /* NetWork */,
+				FEDBA75D1C87CCD900D1EF64 /* Assets.xcassets */,
+				FEDBA75A1C87CCD900D1EF64 /* Main.storyboard */,
+				FEDBA75F1C87CCD900D1EF64 /* LaunchScreen.storyboard */,
+				FEDBA7621C87CCD900D1EF64 /* Info.plist */,
+				FEDBA7511C87CCD900D1EF64 /* Supporting Files */,
+			);
+			path = "机票Demo";
+			sourceTree = "<group>";
+		};
+		FEDBA7511C87CCD900D1EF64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA7851C87D38700D1EF64 /* PrefixHeader.pch */,
+				FEDBA7521C87CCD900D1EF64 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FEDBA76A1C87CCD900D1EF64 /* 机票DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA76B1C87CCD900D1EF64 /* __DemoTests.m */,
+				FEDBA76D1C87CCD900D1EF64 /* Info.plist */,
+			);
+			path = "机票DemoTests";
+			sourceTree = "<group>";
+		};
+		FEDBA7751C87CCD900D1EF64 /* 机票DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA7761C87CCD900D1EF64 /* __DemoUITests.m */,
+				FEDBA7781C87CCD900D1EF64 /* Info.plist */,
+			);
+			path = "机票DemoUITests";
+			sourceTree = "<group>";
+		};
+		FEDBA7861C87D8EF00D1EF64 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				FEDBA78A1C87D9CF00D1EF64 /* APIConfig.h */,
+				FEDBA7871C87D90700D1EF64 /* RTHttpClient.h */,
+				FEDBA7881C87D90E00D1EF64 /* RTHttpClient.m */,
+				FEDBA78B1C87DE7D00D1EF64 /* Publicrequest.h */,
+				FEDBA78C1C87DE7D00D1EF64 /* Publicrequest.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEDBA74D1C87CCD900D1EF64 /* 机票Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEDBA77B1C87CCD900D1EF64 /* Build configuration list for PBXNativeTarget "机票Demo" */;
+			buildPhases = (
+				B780BBE87A7FE9A471F23229 /* Check Pods Manifest.lock */,
+				FEDBA74A1C87CCD900D1EF64 /* Sources */,
+				FEDBA74B1C87CCD900D1EF64 /* Frameworks */,
+				FEDBA74C1C87CCD900D1EF64 /* Resources */,
+				4F7E514C2FD267189D40E7AE /* Embed Pods Frameworks */,
+				8A5A6A61A1FEFFFCCB63E70B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "机票Demo";
+			productName = "机票Demo";
+			productReference = FEDBA74E1C87CCD900D1EF64 /* 机票Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FEDBA7661C87CCD900D1EF64 /* 机票DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEDBA77E1C87CCD900D1EF64 /* Build configuration list for PBXNativeTarget "机票DemoTests" */;
+			buildPhases = (
+				FEDBA7631C87CCD900D1EF64 /* Sources */,
+				FEDBA7641C87CCD900D1EF64 /* Frameworks */,
+				FEDBA7651C87CCD900D1EF64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEDBA7691C87CCD900D1EF64 /* PBXTargetDependency */,
+			);
+			name = "机票DemoTests";
+			productName = "机票DemoTests";
+			productReference = FEDBA7671C87CCD900D1EF64 /* 机票DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FEDBA7711C87CCD900D1EF64 /* 机票DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEDBA7811C87CCD900D1EF64 /* Build configuration list for PBXNativeTarget "机票DemoUITests" */;
+			buildPhases = (
+				FEDBA76E1C87CCD900D1EF64 /* Sources */,
+				FEDBA76F1C87CCD900D1EF64 /* Frameworks */,
+				FEDBA7701C87CCD900D1EF64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEDBA7741C87CCD900D1EF64 /* PBXTargetDependency */,
+			);
+			name = "机票DemoUITests";
+			productName = "机票DemoUITests";
+			productReference = FEDBA7721C87CCD900D1EF64 /* 机票DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEDBA7461C87CCD900D1EF64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "吴宇";
+				TargetAttributes = {
+					FEDBA74D1C87CCD900D1EF64 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					FEDBA7661C87CCD900D1EF64 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FEDBA74D1C87CCD900D1EF64;
+					};
+					FEDBA7711C87CCD900D1EF64 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FEDBA74D1C87CCD900D1EF64;
+					};
+				};
+			};
+			buildConfigurationList = FEDBA7491C87CCD900D1EF64 /* Build configuration list for PBXProject "机票Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FEDBA7451C87CCD900D1EF64;
+			productRefGroup = FEDBA74F1C87CCD900D1EF64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEDBA74D1C87CCD900D1EF64 /* 机票Demo */,
+				FEDBA7661C87CCD900D1EF64 /* 机票DemoTests */,
+				FEDBA7711C87CCD900D1EF64 /* 机票DemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FEDBA74C1C87CCD900D1EF64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDBA7611C87CCD900D1EF64 /* LaunchScreen.storyboard in Resources */,
+				FEDBA75E1C87CCD900D1EF64 /* Assets.xcassets in Resources */,
+				FEDBA75C1C87CCD900D1EF64 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEDBA7651C87CCD900D1EF64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEDBA7701C87CCD900D1EF64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F7E514C2FD267189D40E7AE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A5A6A61A1FEFFFCCB63E70B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B780BBE87A7FE9A471F23229 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEDBA74A1C87CCD900D1EF64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDBA79C1C88207700D1EF64 /* ListTableViewCell.m in Sources */,
+				FEB549CF1C89665000F7DFD7 /* HYSegmentedControl.m in Sources */,
+				FEDBA7591C87CCD900D1EF64 /* ViewController.m in Sources */,
+				FEDBA7961C881AD900D1EF64 /* BaseHandler.m in Sources */,
+				FEDBA7561C87CCD900D1EF64 /* AppDelegate.m in Sources */,
+				FEB549D21C897FC300F7DFD7 /* Conversionofweek.m in Sources */,
+				FEB549C41C89291900F7DFD7 /* SearchTicketViewController.m in Sources */,
+				FEDBA7901C87E10F00D1EF64 /* TicketListViewController.m in Sources */,
+				FEDBA7891C87D90E00D1EF64 /* RTHttpClient.m in Sources */,
+				FEDBA7931C88070300D1EF64 /* TicketListEntity.m in Sources */,
+				FEB549C71C892EC300F7DFD7 /* UIColor+HexString.m in Sources */,
+				FEDBA78D1C87DE7D00D1EF64 /* Publicrequest.m in Sources */,
+				FEDBA7531C87CCD900D1EF64 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEDBA7631C87CCD900D1EF64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDBA76C1C87CCD900D1EF64 /* __DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEDBA76E1C87CCD900D1EF64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDBA7771C87CCD900D1EF64 /* __DemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FEDBA7691C87CCD900D1EF64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEDBA74D1C87CCD900D1EF64 /* 机票Demo */;
+			targetProxy = FEDBA7681C87CCD900D1EF64 /* PBXContainerItemProxy */;
+		};
+		FEDBA7741C87CCD900D1EF64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEDBA74D1C87CCD900D1EF64 /* 机票Demo */;
+			targetProxy = FEDBA7731C87CCD900D1EF64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FEDBA75A1C87CCD900D1EF64 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEDBA75B1C87CCD900D1EF64 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FEDBA75F1C87CCD900D1EF64 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEDBA7601C87CCD900D1EF64 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FEDBA7791C87CCD900D1EF64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FEDBA77A1C87CCD900D1EF64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEDBA77C1C87CCD900D1EF64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5FE8D763D18DE5FD29C0DD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "机票Demo/PrefixHeader.pch";
+				INFOPLIST_FILE = "机票Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wuyu.zhangqian.--Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FEDBA77D1C87CCD900D1EF64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 499662CD6D38D4DDB5CDFF20 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "机票Demo/PrefixHeader.pch";
+				INFOPLIST_FILE = "机票Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wuyu.zhangqian.--Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FEDBA77F1C87CCD900D1EF64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "机票DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wuyu.zhangqian.--DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/机票Demo.app/机票Demo";
+			};
+			name = Debug;
+		};
+		FEDBA7801C87CCD900D1EF64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "机票DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wuyu.zhangqian.--DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/机票Demo.app/机票Demo";
+			};
+			name = Release;
+		};
+		FEDBA7821C87CCD900D1EF64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "机票DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wuyu.zhangqian.--DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "机票Demo";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FEDBA7831C87CCD900D1EF64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "机票DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wuyu.zhangqian.--DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "机票Demo";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEDBA7491C87CCD900D1EF64 /* Build configuration list for PBXProject "机票Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEDBA7791C87CCD900D1EF64 /* Debug */,
+				FEDBA77A1C87CCD900D1EF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEDBA77B1C87CCD900D1EF64 /* Build configuration list for PBXNativeTarget "机票Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEDBA77C1C87CCD900D1EF64 /* Debug */,
+				FEDBA77D1C87CCD900D1EF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEDBA77E1C87CCD900D1EF64 /* Build configuration list for PBXNativeTarget "机票DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEDBA77F1C87CCD900D1EF64 /* Debug */,
+				FEDBA7801C87CCD900D1EF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEDBA7811C87CCD900D1EF64 /* Build configuration list for PBXNativeTarget "机票DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEDBA7821C87CCD900D1EF64 /* Debug */,
+				FEDBA7831C87CCD900D1EF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEDBA7461C87CCD900D1EF64 /* Project object */;
+}
