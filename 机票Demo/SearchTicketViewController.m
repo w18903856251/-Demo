@@ -14,6 +14,12 @@
 #define  Topdistance    25.f  // 居上距离
 #import "Conversionofweek.h"
 #import "TicketListViewController.h"
+#import "CalendarHomeViewController.h"
+#import "CalendarViewController.h"
+//#import "CalendarDayModel.h"
+#import "Color.h"
+
+
 @interface SearchTicketViewController ()<HYSegmentedControlDelegate>
 
 @property (nonatomic) Conversionofweek         *conversionofweek;
@@ -38,6 +44,8 @@
 
 @property (nonatomic) UIButton                 *Dateoneway;  //单程
 @property (nonatomic) UIButton                 *Datebackandforth;  //往返
+
+@property (nonatomic,strong)  CalendarHomeViewController * chvc;
 
 @property (nonatomic) UIButton                 *searchbutton; //搜索按钮
 @end
@@ -303,6 +311,7 @@
     
     [self.Dateoneway setTitle:[NSString stringWithFormat:@"%@  %@",dateString,date]  forState: UIControlStateNormal];
     [self.Dateoneway setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.Dateoneway addTarget:self action:@selector(Datechick:) forControlEvents: UIControlEventTouchUpInside];
     
     [self.backview addSubview:self.Dateoneway];
     [self.Dateoneway mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -349,6 +358,8 @@
         _backview.frame = CGRectMake(0, HeadHigh, SCREEN_WIDTH, SCREEN_HEIGHT-HeadHigh);
     }];
 }
+
+
 
 -(void)selectLeftAction:(id)sender{
     
@@ -402,7 +413,52 @@
     
    
 }
+// 日期选择
 
+-(void)Datechick:(UIButton*)sender{
+    
+    
+    
+    if (!_chvc) {
+        _chvc = [[CalendarHomeViewController alloc]init];
+        
+        
+        _chvc.calendartitle = @"飞机";
+        
+        [_chvc setAirPlaneToDay:365 ToDateforString:nil];//飞机初始化方法
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    _chvc.calendarblock = ^(CalendarDayModel *model){
+        
+        NSLog(@"\n---------------------------");
+        NSLog(@"1星期 %@",[model getWeek]);
+        NSLog(@"2字符串 %@",[model toString]);
+        NSLog(@"3节日  %@",model.holiday);
+        
+        if (model.holiday) {
+            
+            [sender setTitle:[NSString stringWithFormat:@"%@ %@ %@",[model toString],[model getWeek],model.holiday] forState:UIControlStateNormal];
+            
+        }else{
+            
+            [sender setTitle:[NSString stringWithFormat:@"%@ %@",[model toString],[model getWeek]] forState:UIControlStateNormal];
+            
+        }
+    };
+    
+    [self.navigationController pushViewController:_chvc animated:YES];
+
+
+}
 // 搜索按钮点击事件
 -(void)searchChick:(UIButton*)sender{
     

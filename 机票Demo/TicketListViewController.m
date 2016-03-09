@@ -10,6 +10,7 @@
 #import "Publicrequest.h"
 #import "TicketListEntity.h"
 #import "ListTableViewCell.h"
+#import "AirlineseatViewController.h"
 #define kListCellIdentifier            @"ListCellIdentifier"
 @interface TicketListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,retain)   NSMutableArray  *dataSource;
@@ -69,11 +70,31 @@
     
     return cell;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    return 100;
+    
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 15;
     
 }
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    AirlineseatViewController *airlineseat = [[AirlineseatViewController alloc]init];
+    
+    airlineseat.obj = self.dataSource[indexPath.row];
+    [self.navigationController pushViewController:airlineseat animated:YES];
+    
+}
+
+
 
 #pragma mark - /***     网络请求     ****/
 - (void)requestTicketlistDatas
@@ -89,7 +110,7 @@
         weakSelf.dataSource = [NSMutableArray arrayWithArray:buyEntity.retData];
         
        
-        
+        //debugLog(@"++++++%lu",buyEntity.retData.count);
         [weakSelf.tableviewlist reloadData];
         
     } fail:^(id obj) {

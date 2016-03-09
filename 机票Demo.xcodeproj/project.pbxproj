@@ -8,10 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		29257439DC23D2B8ABA9591D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A715D80CC03760D23CCE06C0 /* libPods.a */; };
+		FE06C4571C8D2DBA0063BAD3 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4461C8D2DBA0063BAD3 /* CalendarDayCell.m */; };
+		FE06C4581C8D2DBA0063BAD3 /* CalendarDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4481C8D2DBA0063BAD3 /* CalendarDayModel.m */; };
+		FE06C4591C8D2DBA0063BAD3 /* CalendarHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C44A1C8D2DBA0063BAD3 /* CalendarHomeViewController.m */; };
+		FE06C45A1C8D2DBA0063BAD3 /* CalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C44C1C8D2DBA0063BAD3 /* CalendarLogic.m */; };
+		FE06C45B1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C44E1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.m */; };
+		FE06C45C1C8D2DBA0063BAD3 /* CalendarMonthHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4501C8D2DBA0063BAD3 /* CalendarMonthHeaderView.m */; };
+		FE06C45D1C8D2DBA0063BAD3 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4521C8D2DBA0063BAD3 /* CalendarViewController.m */; };
+		FE06C45E1C8D2DBA0063BAD3 /* chack.png in Resources */ = {isa = PBXBuildFile; fileRef = FE06C4531C8D2DBA0063BAD3 /* chack.png */; };
+		FE06C45F1C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4561C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.m */; };
+		FE06C4621C8D460F0063BAD3 /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4611C8D460F0063BAD3 /* AppUtils.m */; };
+		FE06C4651C8D4A1F0063BAD3 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4641C8D4A1F0063BAD3 /* UIView+frame.m */; };
+		FE06C4681C8D60010063BAD3 /* AirlineseatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4671C8D60010063BAD3 /* AirlineseatViewController.m */; };
+		FE06C46B1C8D6EC60063BAD3 /* Ticketseat.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C46A1C8D6EC60063BAD3 /* Ticketseat.m */; };
+		FE06C46E1C8D7EED0063BAD3 /* TicketseatHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C46D1C8D7EED0063BAD3 /* TicketseatHeadView.m */; };
 		FEB549C41C89291900F7DFD7 /* SearchTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549C31C89291900F7DFD7 /* SearchTicketViewController.m */; };
 		FEB549C71C892EC300F7DFD7 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549C61C892EC300F7DFD7 /* UIColor+HexString.m */; };
 		FEB549CF1C89665000F7DFD7 /* HYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549CE1C89665000F7DFD7 /* HYSegmentedControl.m */; };
 		FEB549D21C897FC300F7DFD7 /* Conversionofweek.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549D11C897FC300F7DFD7 /* Conversionofweek.m */; };
+		FEC8D1CB1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8D1CA1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m */; };
+		FEC8D1CE1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8D1CD1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m */; };
+		FEC8D1D11C8FFF7300357F2A /* UserBookingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8D1D01C8FFF7300357F2A /* UserBookingTableViewCell.m */; };
 		FEDBA7531C87CCD900D1EF64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7521C87CCD900D1EF64 /* main.m */; };
 		FEDBA7561C87CCD900D1EF64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7551C87CCD900D1EF64 /* AppDelegate.m */; };
 		FEDBA7591C87CCD900D1EF64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDBA7581C87CCD900D1EF64 /* ViewController.m */; };
@@ -49,6 +66,34 @@
 		3A5FE8D763D18DE5FD29C0DD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		499662CD6D38D4DDB5CDFF20 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A715D80CC03760D23CCE06C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE06C4451C8D2DBA0063BAD3 /* CalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayCell.h; sourceTree = "<group>"; };
+		FE06C4461C8D2DBA0063BAD3 /* CalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
+		FE06C4471C8D2DBA0063BAD3 /* CalendarDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayModel.h; sourceTree = "<group>"; };
+		FE06C4481C8D2DBA0063BAD3 /* CalendarDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayModel.m; sourceTree = "<group>"; };
+		FE06C4491C8D2DBA0063BAD3 /* CalendarHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarHomeViewController.h; sourceTree = "<group>"; };
+		FE06C44A1C8D2DBA0063BAD3 /* CalendarHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarHomeViewController.m; sourceTree = "<group>"; };
+		FE06C44B1C8D2DBA0063BAD3 /* CalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarLogic.h; sourceTree = "<group>"; };
+		FE06C44C1C8D2DBA0063BAD3 /* CalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarLogic.m; sourceTree = "<group>"; };
+		FE06C44D1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthCollectionViewLayout.h; sourceTree = "<group>"; };
+		FE06C44E1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarMonthCollectionViewLayout.m; sourceTree = "<group>"; };
+		FE06C44F1C8D2DBA0063BAD3 /* CalendarMonthHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthHeaderView.h; sourceTree = "<group>"; };
+		FE06C4501C8D2DBA0063BAD3 /* CalendarMonthHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarMonthHeaderView.m; sourceTree = "<group>"; };
+		FE06C4511C8D2DBA0063BAD3 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		FE06C4521C8D2DBA0063BAD3 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		FE06C4531C8D2DBA0063BAD3 /* chack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chack.png; sourceTree = "<group>"; };
+		FE06C4541C8D2DBA0063BAD3 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		FE06C4551C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
+		FE06C4561C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
+		FE06C4601C8D46080063BAD3 /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
+		FE06C4611C8D460F0063BAD3 /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
+		FE06C4631C8D4A1F0063BAD3 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		FE06C4641C8D4A1F0063BAD3 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		FE06C4661C8D60000063BAD3 /* AirlineseatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirlineseatViewController.h; sourceTree = "<group>"; };
+		FE06C4671C8D60010063BAD3 /* AirlineseatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlineseatViewController.m; sourceTree = "<group>"; };
+		FE06C4691C8D6EC60063BAD3 /* Ticketseat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticketseat.h; sourceTree = "<group>"; };
+		FE06C46A1C8D6EC60063BAD3 /* Ticketseat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticketseat.m; sourceTree = "<group>"; };
+		FE06C46C1C8D7EED0063BAD3 /* TicketseatHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketseatHeadView.h; sourceTree = "<group>"; };
+		FE06C46D1C8D7EED0063BAD3 /* TicketseatHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketseatHeadView.m; sourceTree = "<group>"; };
 		FEB549C21C89291900F7DFD7 /* SearchTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTicketViewController.h; path = ../SearchTicketViewController.h; sourceTree = "<group>"; };
 		FEB549C31C89291900F7DFD7 /* SearchTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTicketViewController.m; path = ../SearchTicketViewController.m; sourceTree = "<group>"; };
 		FEB549C51C892EC300F7DFD7 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../UIColor+HexString.h"; sourceTree = "<group>"; };
@@ -57,6 +102,12 @@
 		FEB549CE1C89665000F7DFD7 /* HYSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYSegmentedControl.m; sourceTree = "<group>"; };
 		FEB549D01C897FC300F7DFD7 /* Conversionofweek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversionofweek.h; sourceTree = "<group>"; };
 		FEB549D11C897FC300F7DFD7 /* Conversionofweek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversionofweek.m; sourceTree = "<group>"; };
+		FEC8D1C91C8FCAD900357F2A /* ReservationforcustomerinfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationforcustomerinfoViewController.h; sourceTree = "<group>"; };
+		FEC8D1CA1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationforcustomerinfoViewController.m; sourceTree = "<group>"; };
+		FEC8D1CC1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationforcustomerinfoHeadView.h; sourceTree = "<group>"; };
+		FEC8D1CD1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationforcustomerinfoHeadView.m; sourceTree = "<group>"; };
+		FEC8D1CF1C8FFF7300357F2A /* UserBookingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBookingTableViewCell.h; sourceTree = "<group>"; };
+		FEC8D1D01C8FFF7300357F2A /* UserBookingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBookingTableViewCell.m; sourceTree = "<group>"; };
 		FEDBA74E1C87CCD900D1EF64 /* 机票Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "机票Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDBA7521C87CCD900D1EF64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEDBA7541C87CCD900D1EF64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,13 +183,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE06C4431C8D2DB00063BAD3 /* Three parties */ = {
+			isa = PBXGroup;
+			children = (
+				FE06C4601C8D46080063BAD3 /* AppUtils.h */,
+				FE06C4611C8D460F0063BAD3 /* AppUtils.m */,
+				FE06C4631C8D4A1F0063BAD3 /* UIView+frame.h */,
+				FE06C4641C8D4A1F0063BAD3 /* UIView+frame.m */,
+				FE06C4441C8D2DBA0063BAD3 /* ZFCalendar */,
+			);
+			path = "Three parties";
+			sourceTree = "<group>";
+		};
+		FE06C4441C8D2DBA0063BAD3 /* ZFCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				FE06C4451C8D2DBA0063BAD3 /* CalendarDayCell.h */,
+				FE06C4461C8D2DBA0063BAD3 /* CalendarDayCell.m */,
+				FE06C4471C8D2DBA0063BAD3 /* CalendarDayModel.h */,
+				FE06C4481C8D2DBA0063BAD3 /* CalendarDayModel.m */,
+				FE06C4491C8D2DBA0063BAD3 /* CalendarHomeViewController.h */,
+				FE06C44A1C8D2DBA0063BAD3 /* CalendarHomeViewController.m */,
+				FE06C44B1C8D2DBA0063BAD3 /* CalendarLogic.h */,
+				FE06C44C1C8D2DBA0063BAD3 /* CalendarLogic.m */,
+				FE06C44D1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.h */,
+				FE06C44E1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.m */,
+				FE06C44F1C8D2DBA0063BAD3 /* CalendarMonthHeaderView.h */,
+				FE06C4501C8D2DBA0063BAD3 /* CalendarMonthHeaderView.m */,
+				FE06C4511C8D2DBA0063BAD3 /* CalendarViewController.h */,
+				FE06C4521C8D2DBA0063BAD3 /* CalendarViewController.m */,
+				FE06C4531C8D2DBA0063BAD3 /* chack.png */,
+				FE06C4541C8D2DBA0063BAD3 /* Color.h */,
+				FE06C4551C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.h */,
+				FE06C4561C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.m */,
+			);
+			path = ZFCalendar;
+			sourceTree = "<group>";
+		};
 		FEB549C81C8962B000F7DFD7 /* Air tickets Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FEDBA78E1C87E10F00D1EF64 /* TicketListViewController.h */,
-				FEDBA78F1C87E10F00D1EF64 /* TicketListViewController.m */,
 				FEB549C21C89291900F7DFD7 /* SearchTicketViewController.h */,
 				FEB549C31C89291900F7DFD7 /* SearchTicketViewController.m */,
+				FEDBA78E1C87E10F00D1EF64 /* TicketListViewController.h */,
+				FEDBA78F1C87E10F00D1EF64 /* TicketListViewController.m */,
+				FE06C4661C8D60000063BAD3 /* AirlineseatViewController.h */,
+				FE06C4671C8D60010063BAD3 /* AirlineseatViewController.m */,
+				FE06C46C1C8D7EED0063BAD3 /* TicketseatHeadView.h */,
+				FE06C46D1C8D7EED0063BAD3 /* TicketseatHeadView.m */,
+				FEC8D1C91C8FCAD900357F2A /* ReservationforcustomerinfoViewController.h */,
+				FEC8D1CA1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m */,
+				FEC8D1CC1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.h */,
+				FEC8D1CD1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m */,
 			);
 			path = "Air tickets Controller";
 			sourceTree = "<group>";
@@ -148,6 +244,8 @@
 			children = (
 				FEDBA79A1C88207700D1EF64 /* ListTableViewCell.h */,
 				FEDBA79B1C88207700D1EF64 /* ListTableViewCell.m */,
+				FEC8D1CF1C8FFF7300357F2A /* UserBookingTableViewCell.h */,
+				FEC8D1D01C8FFF7300357F2A /* UserBookingTableViewCell.m */,
 			);
 			path = "Air tickets Cell";
 			sourceTree = "<group>";
@@ -157,6 +255,8 @@
 			children = (
 				FEDBA7911C88070300D1EF64 /* TicketListEntity.h */,
 				FEDBA7921C88070300D1EF64 /* TicketListEntity.m */,
+				FE06C4691C8D6EC60063BAD3 /* Ticketseat.h */,
+				FE06C46A1C8D6EC60063BAD3 /* Ticketseat.m */,
 			);
 			path = "Air tickets Model";
 			sourceTree = "<group>";
@@ -172,6 +272,7 @@
 				FEDBA7951C881AD900D1EF64 /* BaseHandler.m */,
 				FEB549D01C897FC300F7DFD7 /* Conversionofweek.h */,
 				FEB549D11C897FC300F7DFD7 /* Conversionofweek.m */,
+				FE06C4431C8D2DB00063BAD3 /* Three parties */,
 			);
 			path = "My wrapper class";
 			sourceTree = "<group>";
@@ -366,6 +467,7 @@
 			files = (
 				FEDBA7611C87CCD900D1EF64 /* LaunchScreen.storyboard in Resources */,
 				FEDBA75E1C87CCD900D1EF64 /* Assets.xcassets in Resources */,
+				FE06C45E1C8D2DBA0063BAD3 /* chack.png in Resources */,
 				FEDBA75C1C87CCD900D1EF64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,14 +545,30 @@
 				FEB549CF1C89665000F7DFD7 /* HYSegmentedControl.m in Sources */,
 				FEDBA7591C87CCD900D1EF64 /* ViewController.m in Sources */,
 				FEDBA7961C881AD900D1EF64 /* BaseHandler.m in Sources */,
+				FE06C45F1C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.m in Sources */,
 				FEDBA7561C87CCD900D1EF64 /* AppDelegate.m in Sources */,
 				FEB549D21C897FC300F7DFD7 /* Conversionofweek.m in Sources */,
 				FEB549C41C89291900F7DFD7 /* SearchTicketViewController.m in Sources */,
 				FEDBA7901C87E10F00D1EF64 /* TicketListViewController.m in Sources */,
+				FE06C45D1C8D2DBA0063BAD3 /* CalendarViewController.m in Sources */,
 				FEDBA7891C87D90E00D1EF64 /* RTHttpClient.m in Sources */,
+				FE06C4591C8D2DBA0063BAD3 /* CalendarHomeViewController.m in Sources */,
 				FEDBA7931C88070300D1EF64 /* TicketListEntity.m in Sources */,
+				FEC8D1CB1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m in Sources */,
+				FE06C45B1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.m in Sources */,
+				FEC8D1D11C8FFF7300357F2A /* UserBookingTableViewCell.m in Sources */,
 				FEB549C71C892EC300F7DFD7 /* UIColor+HexString.m in Sources */,
+				FE06C45A1C8D2DBA0063BAD3 /* CalendarLogic.m in Sources */,
+				FE06C4581C8D2DBA0063BAD3 /* CalendarDayModel.m in Sources */,
+				FE06C46E1C8D7EED0063BAD3 /* TicketseatHeadView.m in Sources */,
 				FEDBA78D1C87DE7D00D1EF64 /* Publicrequest.m in Sources */,
+				FE06C45C1C8D2DBA0063BAD3 /* CalendarMonthHeaderView.m in Sources */,
+				FE06C4621C8D460F0063BAD3 /* AppUtils.m in Sources */,
+				FE06C46B1C8D6EC60063BAD3 /* Ticketseat.m in Sources */,
+				FEC8D1CE1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m in Sources */,
+				FE06C4571C8D2DBA0063BAD3 /* CalendarDayCell.m in Sources */,
+				FE06C4651C8D4A1F0063BAD3 /* UIView+frame.m in Sources */,
+				FE06C4681C8D60010063BAD3 /* AirlineseatViewController.m in Sources */,
 				FEDBA7531C87CCD900D1EF64 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

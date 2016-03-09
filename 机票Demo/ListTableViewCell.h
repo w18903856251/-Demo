@@ -11,3 +11,18 @@
 @interface ListTableViewCell : UITableViewCell
 - (void)updateCarContent:(id)obj;
 @end
+
+//机票座位表头
+@interface TicketseatHeadCell: UITableViewCell
+- (void)updateCarContent:(id)obj;
+@end
+
+typedef void (^TabkeViewCellBtnClickBlock)(id cell,NSUInteger index);
+//机票座位
+@interface TicketseatCell : UITableViewCell
+
+@property (nonatomic,copy) TabkeViewCellBtnClickBlock    btnClickBlock;
+
+- (void)updateCarContent:(id)obj;
+
+@end

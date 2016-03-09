@@ -11,4 +11,7 @@
 @interface Publicrequest : NSObject
 //  机票列表
 + (void)requestTicketlistWithParameters:(NSMutableDictionary *)parameter success:(void(^)(id obj))SuccessBlock fail:(void (^)(id obj))FailedBlock complete:(void (^)(id obj))CompleteBlock;
+
+// 座位
++ (void)requestTicketseatWithParameters:(NSMutableDictionary *)parameter success:(void(^)(id obj))SuccessBlock fail:(void (^)(id obj))FailedBlock complete:(void (^)(id obj))CompleteBlock;
 @end

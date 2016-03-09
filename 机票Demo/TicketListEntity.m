@@ -7,7 +7,49 @@
 //
 
 #import "TicketListEntity.h"
-@implementation BuyCar
+
+@implementation Policyinfo
+
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
+@end
+
+@implementation Dportinfo
+
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
+@end
+
+
+@implementation Dateinfo
+
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
+@end
+
+@implementation Craftinfo
+
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
+@end
+
+@implementation Basinfo
+
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
+@end
+
+@implementation Aportinfo
 
 +(BOOL)propertyIsOptional:(NSString*)propertyName
 {
