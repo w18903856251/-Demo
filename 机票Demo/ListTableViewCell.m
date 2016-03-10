@@ -12,6 +12,7 @@
 #import "UIView+frame.h"
 #import "Ticketseat.h"
 #import "Masonry.h"
+#import "BaseGroupTableViewController.h"
 @interface  ListTableViewCell ()<UIGestureRecognizerDelegate>
 
 
@@ -97,7 +98,7 @@
         _Datestar.frame = CGRectMake(15, 5, (SCREEN_WIDTH-30)/4 , 20);
         
         _Divider.frame = CGRectMake(_Datestar.right, _Datestar.top, _Datestar.width, 20);
-        _Datefininsh.frame = CGRectMake(_Divider.right, _Datestar.top, _Divider.width, 15);
+        _Datefininsh.frame = CGRectMake(_Divider.right, _Datestar.top, _Divider.width, 20);
     
     
     _Airportstar.frame = CGRectMake(15, _Datestar.bottom+10, _Datestar.width, _Datestar.height);
@@ -322,6 +323,7 @@
         self.SeatPrice  =  [AppUtils creatNormalLabel:blackColor align:NSTextAlignmentCenter font:font parent:self.contentView];
         
         self.Bookingbutton = [AppUtils createButton:@"预订" titleColor:[UIColor blackColor] img:nil bg:nil parent:self.contentView];
+        [_Bookingbutton addTarget:self action:@selector(cellBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         
         
         
@@ -383,7 +385,7 @@
         make.height.mas_equalTo(20);
         make.top.mas_equalTo(_SeatPrice.mas_centerY);
     }];
-    [_Bookingbutton addTarget:self action:@selector(cellBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
     
 }
 
@@ -409,10 +411,15 @@
 #pragma mark -  按钮 点击
 - (void)cellBtnClicked:(UIButton *)btn
 {
-    if (self.btnClickBlock)
+//    if (btn) {
+//        self.btn();
+//    }
+    
+    if (self.btnClickBlock){
         
         self.btnClickBlock(self,btn.tag);
-    debugLog(@"++++++++++%ld",btn.tag);
+    }
+    
     
 }
 

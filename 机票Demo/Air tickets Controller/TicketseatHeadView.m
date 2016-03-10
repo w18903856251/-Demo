@@ -54,9 +54,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
-    
-    [super layoutSubviews];
+
     
     
     _Dateweek.frame = CGRectMake(15, 10, SCREEN_WIDTH/2, 30);

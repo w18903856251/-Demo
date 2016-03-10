@@ -466,7 +466,7 @@
     
         TicketListViewController * ticketlistvc = [[TicketListViewController alloc]init];
     
-        [self.navigationController pushViewController:ticketlistvc animated:YES];
+    [self pushViewController:ticketlistvc];
     
 }
 

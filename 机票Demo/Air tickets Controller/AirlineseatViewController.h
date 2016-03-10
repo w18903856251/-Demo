@@ -6,8 +6,8 @@
 //  Copyright © 2016年 吴宇. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseGroupTableViewController.h"
 
-@interface AirlineseatViewController : UIViewController
+@interface AirlineseatViewController : BaseGroupTableViewController
 @property (nonatomic)  NSDictionary *obj;
 @end

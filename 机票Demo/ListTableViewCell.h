@@ -23,6 +23,8 @@ typedef void (^TabkeViewCellBtnClickBlock)(id cell,NSUInteger index);
 
 @property (nonatomic,copy) TabkeViewCellBtnClickBlock    btnClickBlock;
 
+@property (nonatomic,copy) void (^btn)();
+
 - (void)updateCarContent:(id)obj;
 
 @end

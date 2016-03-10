@@ -6,8 +6,8 @@
 //  Copyright © 2016年 吴宇. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SearchTicketViewController : UIViewController
+@interface SearchTicketViewController : BaseViewController
 
 @end

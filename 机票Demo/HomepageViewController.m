@@ -1,25 +1,30 @@
 //
-//  ViewController.m
+//  HomepageViewController.m
 //  机票Demo
 //
-//  Created by 吴宇 on 16/3/3.
+//  Created by 吴宇 on 16/3/10.
 //  Copyright © 2016年 吴宇. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HomepageViewController.h"
 #import "Masonry.h"
 
 #import "SearchTicketViewController.h"
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+
+@interface HomepageViewController ()
+
 @property (nonatomic,strong) UIImageView *   imageview; // 机票点击视图
 @property (nonatomic)        UILabel     *   titlelabel;
+
 @end
 
-@implementation ViewController
+@implementation HomepageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     self.imageview = [[UIImageView alloc]initWithFrame:CGRectMake(50, 200, 80, 80)];
     self.titlelabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 20, 60, 40)];
     self.titlelabel.text  = @"机票列表";
@@ -38,25 +43,34 @@
     
     [self.view addSubview:self.imageview];
     
+
     
-    
-    
-    
+    // Do any additional setup after loading the view.
 }
+
 -(void)event:(UITapGestureRecognizer *)sender{
     
-
+    
     SearchTicketViewController * searchticker = [[SearchTicketViewController alloc]init];
     
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:searchticker];
-//    
-//    [self presentViewController:nav animated:YES completion:^{
-//        
-//    }];
-//
-    [self.navigationController pushViewController:searchticker animated:YES];
+    [self pushViewController:searchticker];
+    
     
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

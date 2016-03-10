@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 //  订票页面cell
-@interface UserBookingTableViewCell : UITableViewCell
 
+/**
+ *   普通  选择 或  输入
+ */
+
+@interface UserBookingTableViewCell : UITableViewCell
+@property (nonatomic,strong) UITextField *contentTextField;
 //配置乘机人
 - (void)configureUppassengersData;
+- (void)configureCellContent:(NSArray *)array;
 @end
