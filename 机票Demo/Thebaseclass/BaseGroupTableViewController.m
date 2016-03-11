@@ -34,6 +34,10 @@
         m_Models = [[NSMutableArray alloc] init];
     }
     [m_Models addObjectsFromArray:models];
+    
+    _dataSource = m_Models;
+    
+    //debugLog(@"数据===%@",_dataSource);
 }
 
 - (id)modelsAtIndexPath:(NSIndexPath *)indexPath {
@@ -43,7 +47,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
 
-    return 100;
+    return 120;
 
 }
 #pragma mark UITableViewDataSource
@@ -79,13 +83,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.groupTable     = [[UITableView alloc] initWithFrame:CGRectMake(0.f, 0.f, SCREEN_WIDTH, SCREEN_HEIGHT-IOS_STATUSBAR_HEIGHT-IOS_NAVBAR_HEIGHT) style:UITableViewStylePlain];
+    self.groupTable     = [[UITableView alloc] initWithFrame:CGRectMake(0.f, 0.f, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
    // _groupTable.backgroundView               = nil;
     //_groupTable.backgroundColor              = [UIColor yellowColor];
     self.groupTable.tableFooterView = [[UIView alloc]init];
 //    [_groupTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 //    _groupTable.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_groupTable];
+    
+    
+    
     
     // Do any additional setup after loading the view.
 }

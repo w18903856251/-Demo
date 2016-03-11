@@ -22,6 +22,9 @@
 		FE06C4681C8D60010063BAD3 /* AirlineseatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4671C8D60010063BAD3 /* AirlineseatViewController.m */; };
 		FE06C46B1C8D6EC60063BAD3 /* Ticketseat.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C46A1C8D6EC60063BAD3 /* Ticketseat.m */; };
 		FE06C46E1C8D7EED0063BAD3 /* TicketseatHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C46D1C8D7EED0063BAD3 /* TicketseatHeadView.m */; };
+		FE7BE3DB1C92B10F004996B7 /* BaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3DA1C92B10F004996B7 /* BaseAnimation.m */; };
+		FE7BE3DE1C92B521004996B7 /* ModalAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3DD1C92B521004996B7 /* ModalAnimation.m */; };
+		FE7BE3E11C92BB6E004996B7 /* ScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3E01C92BB6E004996B7 /* ScaleAnimation.m */; };
 		FEB03E8E1C9113D500077B67 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E8D1C9113D500077B67 /* BaseViewController.m */; };
 		FEB03E921C9115C700077B67 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E911C9115C700077B67 /* HomepageViewController.m */; };
 		FEB03E951C911EEA00077B67 /* BaseGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E941C911EEA00077B67 /* BaseGroupTableViewController.m */; };
@@ -95,6 +98,12 @@
 		FE06C46A1C8D6EC60063BAD3 /* Ticketseat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticketseat.m; sourceTree = "<group>"; };
 		FE06C46C1C8D7EED0063BAD3 /* TicketseatHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketseatHeadView.h; sourceTree = "<group>"; };
 		FE06C46D1C8D7EED0063BAD3 /* TicketseatHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketseatHeadView.m; sourceTree = "<group>"; };
+		FE7BE3D91C92B10F004996B7 /* BaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimation.h; sourceTree = "<group>"; };
+		FE7BE3DA1C92B10F004996B7 /* BaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimation.m; sourceTree = "<group>"; };
+		FE7BE3DC1C92B521004996B7 /* ModalAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalAnimation.h; sourceTree = "<group>"; };
+		FE7BE3DD1C92B521004996B7 /* ModalAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalAnimation.m; sourceTree = "<group>"; };
+		FE7BE3DF1C92BB6E004996B7 /* ScaleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleAnimation.h; sourceTree = "<group>"; };
+		FE7BE3E01C92BB6E004996B7 /* ScaleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleAnimation.m; sourceTree = "<group>"; };
 		FEB03E8C1C9113D500077B67 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ../BaseViewController.h; sourceTree = "<group>"; };
 		FEB03E8D1C9113D500077B67 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ../BaseViewController.m; sourceTree = "<group>"; };
 		FEB03E901C9115C700077B67 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
@@ -231,6 +240,12 @@
 				FEB03E8D1C9113D500077B67 /* BaseViewController.m */,
 				FEB03E931C911EEA00077B67 /* BaseGroupTableViewController.h */,
 				FEB03E941C911EEA00077B67 /* BaseGroupTableViewController.m */,
+				FE7BE3D91C92B10F004996B7 /* BaseAnimation.h */,
+				FE7BE3DA1C92B10F004996B7 /* BaseAnimation.m */,
+				FE7BE3DC1C92B521004996B7 /* ModalAnimation.h */,
+				FE7BE3DD1C92B521004996B7 /* ModalAnimation.m */,
+				FE7BE3DF1C92BB6E004996B7 /* ScaleAnimation.h */,
+				FE7BE3E01C92BB6E004996B7 /* ScaleAnimation.m */,
 			);
 			path = Thebaseclass;
 			sourceTree = "<group>";
@@ -560,6 +575,8 @@
 				FEB549CF1C89665000F7DFD7 /* HYSegmentedControl.m in Sources */,
 				FEDBA7961C881AD900D1EF64 /* BaseHandler.m in Sources */,
 				FE06C45F1C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.m in Sources */,
+				FE7BE3E11C92BB6E004996B7 /* ScaleAnimation.m in Sources */,
+				FE7BE3DB1C92B10F004996B7 /* BaseAnimation.m in Sources */,
 				FEB03E951C911EEA00077B67 /* BaseGroupTableViewController.m in Sources */,
 				FEDBA7561C87CCD900D1EF64 /* AppDelegate.m in Sources */,
 				FEB549D21C897FC300F7DFD7 /* Conversionofweek.m in Sources */,
@@ -577,6 +594,7 @@
 				FE06C4581C8D2DBA0063BAD3 /* CalendarDayModel.m in Sources */,
 				FEB03E921C9115C700077B67 /* HomepageViewController.m in Sources */,
 				FE06C46E1C8D7EED0063BAD3 /* TicketseatHeadView.m in Sources */,
+				FE7BE3DE1C92B521004996B7 /* ModalAnimation.m in Sources */,
 				FEDBA78D1C87DE7D00D1EF64 /* Publicrequest.m in Sources */,
 				FE06C45C1C8D2DBA0063BAD3 /* CalendarMonthHeaderView.m in Sources */,
 				FE06C4621C8D460F0063BAD3 /* AppUtils.m in Sources */,

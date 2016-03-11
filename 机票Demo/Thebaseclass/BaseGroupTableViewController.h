@@ -27,6 +27,7 @@ typedef void (^CellConfigureBefore)(id cell, id model, NSIndexPath * indexPath);
 @property (nonatomic,strong) NSMutableArray *dataSource;
 
 @property (nonatomic, strong)  NSString *cellIdentifier;
+
 //---------Public
 
 - (void)addModels:(NSArray *)models;

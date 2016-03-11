@@ -14,6 +14,11 @@
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic,assign) NSUInteger                     currentPage;
+@property (nonatomic,assign) NSUInteger                     maxPage;
+@property (nonatomic,assign) BOOL                           isTableRefreshing;
+
+
 // 控制器入栈
 - (void)pushViewController:(UIViewController *)viewController;
 
