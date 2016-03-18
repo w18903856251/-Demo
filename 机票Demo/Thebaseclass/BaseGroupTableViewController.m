@@ -34,10 +34,11 @@
         m_Models = [[NSMutableArray alloc] init];
     }
     [m_Models addObjectsFromArray:models];
+    //[m_Models addObject:models];
     
     _dataSource = m_Models;
     
-    //debugLog(@"数据===%@",_dataSource);
+    debugLog(@"数据===%ld",m_Models.count);
 }
 
 - (id)modelsAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,6 +63,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier
                                                             forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     id model = [self modelsAtIndexPath:indexPath];
     
     
@@ -83,12 +85,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.groupTable     = [[UITableView alloc] initWithFrame:CGRectMake(0.f, 0.f, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
-   // _groupTable.backgroundView               = nil;
+    self.groupTable     = [[UITableView alloc] init];
+    _groupTable.backgroundView               = nil;
     //_groupTable.backgroundColor              = [UIColor yellowColor];
     self.groupTable.tableFooterView = [[UIView alloc]init];
-//    [_groupTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-//    _groupTable.showsVerticalScrollIndicator = NO;
+    [_groupTable setSeparatorStyle: UITableViewCellSeparatorStyleNone];
+    _groupTable.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_groupTable];
     
     

@@ -14,7 +14,7 @@
 #import <MJRefresh.h>
 #import "ModalAnimation.h"
 #import "ScaleAnimation.h"
-
+#import "Conversionofweek.h"
 #define kListCellIdentifier            @"ListCellIdentifier"
 @interface TicketListViewController ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIViewControllerTransitioningDelegate>
 {
@@ -23,6 +23,10 @@
     ModalAnimation *_modalAnimationController;
     AirlineseatViewController *airlineseat;
     ScaleAnimation *_scaleAnimationController;
+    
+    UILabel * Alabel;
+    
+    NSString * DefaultDate;
 }
 
 //@property (nonatomic,strong) PDTransitionAnimator *minToMaxAnimator;
@@ -45,17 +49,63 @@
    
     self.navigationItem.title = @"上海 - 天津";
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    UIView * backview = [[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 40)];
+    
+    backview.backgroundColor =[UIColor colorWithHexString:HOMEPAGECOLOR_BOSS];
+    [self.view addSubview:backview];
+    
+    UIButton * AButton = [[UIButton alloc]initWithFrame:CGRectMake(15, 10, (SCREEN_WIDTH-30)/3, 20)];
+    [AButton setTitle:@"< 前一天" forState:UIControlStateNormal];
+    [AButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [AButton addTarget:self action:@selector(BeforeChick:) forControlEvents:UIControlEventTouchUpInside];
+    [backview addSubview:AButton];
+    
+     Alabel = [[UILabel alloc]initWithFrame:CGRectMake(AButton.right, 10, (SCREEN_WIDTH-30)/3, 20)];
+    Alabel.font =[UIFont systemFontOfSize:12];
+    NSDate *currentDate = [NSDate date];//获取当前时间，日期
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY.MM.dd"];
+    DefaultDate = [dateFormatter stringFromDate:currentDate];
+    
+    NSString * date= [Conversionofweek weekdayStringFromDate:currentDate];
+    
+    //Alabel.text = DefaultDate;
+    Alabel.text = [NSString stringWithFormat:@"%@  %@",
+                   DefaultDate,date];
+    
+    //[Alabel setTitle:[NSString stringWithFormat:@"%@  %@",dateString,date]  forState: UIControlStateNormal];
+    
+   // Alabel.backgroundColor = [UIColor blackColor];
+    
+    [backview addSubview:Alabel];
+    
+    UIButton * BButton = [[UIButton alloc]initWithFrame:CGRectMake(Alabel.right, 10, (SCREEN_WIDTH-30)/3, 20)];
+    [BButton setTitle:@"后一天 >" forState:UIControlStateNormal];
+    [BButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [BButton addTarget:self action:@selector(AfterChick:) forControlEvents:UIControlEventTouchUpInside];
+    [backview addSubview:BButton];
+    
+    UILabel  *label = [[UILabel alloc]initWithFrame:CGRectMake(0, backview.bottom-1, SCREEN_WIDTH, 1)];
+    label.backgroundColor =[UIColor grayColor];
+    
+    [self.view addSubview:label];
+    
     _scaleAnimationController = [[ScaleAnimation alloc] initWithNavigationController:self.navigationController];
     [self requestTicketlistDatas];
     
     self.navigationController.delegate =self;
     self.groupTable.delegate = self;
-    //self.groupTable.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64);
+    
+    self.groupTable.frame = CGRectMake(15, 45, SCREEN_WIDTH-30, SCREEN_HEIGHT-64);
     [self.groupTable registerClass:[ListTableViewCell class] forCellReuseIdentifier:kListCellIdentifier];
     
-    
+   
+    //[_dataDelegate addModels:b];
     
     _dataDelegate = [[BaseGroupTableViewController alloc] initWithIdentifier:kListCellIdentifier configureBlock:^(ListTableViewCell* cell, id model, NSIndexPath *indexPath) {
+        
         
         [cell updateCarContent:model];
         
@@ -73,45 +123,6 @@
 }
 
 
-//#pragma mark - Table view data source
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    // Return the number of sections.
-//    return 2;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    // Return the number of rows in the section.
-//    
-//   
-//    return self.dataSource.count;
-//}
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//    //__weak TicketListViewController   *buyCarCtrl = self;
-//    ListTableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:kListCellIdentifier forIndexPath:indexPath];
-//    
-////    cell.btnClickBlock = ^(id cell,NSUInteger index) {
-////        [buyCarCtrl handleCellBtnClicked:cell index:index];
-////    };
-    //[cell updateCarContent:self.dataSource[indexPath.row]];
-//    
-//    return cell;
-//}
-//
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    
-//    
-//    return 100;
-//    
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    return 15;
-//    
-//}
-//
-//
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
@@ -121,16 +132,17 @@
     
     airlineseat.obj = _dataDelegate.dataSource[indexPath.row];
     
+    
+    //  自定义转场动画效果
+    
    _scaleAnimationController.viewForInteraction = airlineseat.view;
     
-    //[self.navigationController pushViewController:airlineseat animated:YES];
-    
-    debugLog(@"数据===%ld",indexPath.row);
     [self pushViewController:airlineseat];
     
     
 }
 
+//  自定义cell动画效果
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
@@ -140,6 +152,61 @@
         cell.frame = frame;
     } completion:nil];
 }
+
+//前一天
+-(void)BeforeChick:(UIButton*)sender{
+    
+    //sender.tag++;
+    NSInteger  index = sender.tag;
+    
+    debugLog(@"labee = %ld",sender.tag);
+    NSString * dateString =   [Alabel.text substringToIndex:10];//截取掉下标7之后的字符串 Alabel.text;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+    
+        NSDate *date = [formatter dateFromString:dateString];
+    
+        NSDate *yesterday = [NSDate dateWithTimeInterval:-60  * 60 * 24 sinceDate:date];
+    
+       //NSDate *tomorrow = [NSDate dateWithTimeInterval:60 * index* 60 * 24 sinceDate:date];
+    
+    NSString * dates= [Conversionofweek weekdayStringFromDate:yesterday];
+    
+    Alabel.text = [NSString stringWithFormat:@"%@  %@",
+                   [formatter stringFromDate:yesterday],dates];
+    
+    NSLog(@"yesterday %@    ",Alabel.text);
+}
+
+//前一天
+-(void)AfterChick:(UIButton*)sender{
+    
+    
+    NSInteger  index = sender.tag;
+    
+    debugLog(@"labee = %ld",index);
+    NSString * dateString =   [Alabel.text substringToIndex:10];//截取掉下标7之后的字符串 Alabel.text;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDate *date = [formatter dateFromString:dateString];
+    
+    
+    NSDate *tomorrow = [NSDate dateWithTimeInterval:60 *  60 * 24 sinceDate:date];
+    
+    NSString * dates= [Conversionofweek weekdayStringFromDate:tomorrow];
+    
+    Alabel.text = [NSString stringWithFormat:@"%@  %@",
+                   [formatter stringFromDate:tomorrow],dates];
+    
+    NSLog(@"yesterday %@    ",Alabel.text);
+}
+
+
 
 #pragma mark - /***     网络请求     ****/
 - (void)requestTicketlistDatas
@@ -156,6 +223,7 @@
         
          [_dataDelegate addModels:buyEntity.retData];
         
+        debugLog(@"model==%@",_dataDelegate.dataSource);
        //[weakSelf.dataSource addObject:buyEntity.retData];
         [weakSelf.groupTable reloadData];
         
@@ -235,16 +303,6 @@
          }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 -(id)
 animationControllerForPresentedController:(UIViewController
                                            *)presented presentingController:(UIViewController
@@ -259,7 +317,7 @@ animationControllerForDismissedController:(UIViewController
     return _modalAnimationController;
 }
 
-
+//  自定义动画效果
 #pragma mark - Navigation Controller Delegate
 
 -(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
@@ -270,11 +328,7 @@ animationControllerForDismissedController:(UIViewController
    
        animationController = _scaleAnimationController;
     
-//    else if ([[[NSUserDefaults standardUserDefaults] stringForKey:USER_DEFAULTS_NAVIGATION_TRANSITION] isEqualToString:USER_DEFAULTS_NAVIGATION_TRANSITION_FLIP]) {
-//        animationController = _shuffleAnimationController;
-//    } else if ([[[NSUserDefaults standardUserDefaults] stringForKey:USER_DEFAULTS_NAVIGATION_TRANSITION] isEqualToString:USER_DEFAULTS_NAVIGATION_TRANSITION_SCALE]) {
-//        animationController = _scaleAnimationController;
-//    }
+
     switch (operation) {
         case UINavigationControllerOperationPush:
             animationController.type = AnimationTypePresent;

@@ -6,8 +6,8 @@
 //  Copyright © 2016年 吴宇. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseGroupTableViewController.h"
 
-@interface SearchTicketViewController : BaseViewController
+@interface SearchTicketViewController : BaseGroupTableViewController
 
 @end

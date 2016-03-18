@@ -111,7 +111,7 @@
 
 - (id)initWithOriginY:(CGFloat)y Titles:(NSArray *)titles delegate:(id)delegate
 {
-    CGRect rect4View = CGRectMake(15, y, HYSegmentedControl_Width-30, HYSegmentedControl_Height);
+    CGRect rect4View = CGRectMake(0, y, (SCREEN_WIDTH-30-10-4), HYSegmentedControl_Height);
     if (self = [super initWithFrame:rect4View]) {
         
         self.backgroundColor = [UIColor whiteColor];
@@ -119,7 +119,7 @@
         
         self.delegate = delegate;
         
-        debugLog(@"%f",HYSegmentedControl_Width/5);
+        //
         //
         //  array4btn
         //
@@ -128,12 +128,16 @@
         //
         //  set button
         //
-        CGFloat width4btn = rect4View.size.width/[titles count];
+        CGFloat width4btn = (SCREEN_WIDTH-30-10-4)/[titles count];
+        
+//        debugLog(@"%f",rect4View.size.width);
+//        debugLog(@"%f",width4btn);
+//        debugLog(@"%ld",titles.count);
 //        if (width4btn < Min_Width_4_Button) {
 //            width4btn = Min_Width_4_Button;
 //        }
         
-        _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
         _scrollView.backgroundColor = self.backgroundColor;
         _scrollView.userInteractionEnabled = YES;
         //_scrollView.contentSize = CGSizeMake(4*width4btn, HYSegmentedControl_Height);
@@ -142,9 +146,15 @@
         for (int i = 0; i<[titles count]; i++) {
             
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-            btn.frame = CGRectMake(i*width4btn, .0f, width4btn, HYSegmentedControl_Height);
+            btn.frame = CGRectMake(19 + i*(SCREEN_WIDTH-30-4)/2, 0.f, (SCREEN_WIDTH-30-10-4)/2, HYSegmentedControl_Height);
+            
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             btn.titleLabel.font = [UIFont boldSystemFontOfSize:FONT_SIZE_BUTTON];
+            CALayer * downButtonLayer = [btn layer];
+            [downButtonLayer setMasksToBounds:YES];
+            [downButtonLayer setCornerRadius:0.0];
+            [downButtonLayer setBorderWidth:1.0];
+            [downButtonLayer setBorderColor:[[UIColor grayColor] CGColor]];
             //[btn setTitleColor:[UIColor colorWithHexString:HOMEPAGECOLOR_BOSS] forState:UIControlStateSelected];
             [btn setTitle:[titles objectAtIndex:i] forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(segmentedControlChange:) forControlEvents:UIControlEventTouchUpInside];
@@ -172,14 +182,14 @@
         //  bottom lineView
         //
         
-        _DefaultLine = [[UIView alloc] initWithFrame:CGRectMake(0.f, HYSegmentedControl_Height-2.f, SCREEN_WIDTH, 2.0f)];
-        _DefaultLine.backgroundColor = [UIColor colorWithHexString:DEFAULTGRAYCOLOR];
-        [_scrollView addSubview:_DefaultLine];
-        
+//        _DefaultLine = [[UIView alloc] initWithFrame:CGRectMake(0.f, HYSegmentedControl_Height-2.f, SCREEN_WIDTH, 2.0f)];
+//        _DefaultLine.backgroundColor = [UIColor colorWithHexString:DEFAULTGRAYCOLOR];
+//        [_scrollView addSubview:_DefaultLine];
+//        
         [self addSubview:_scrollView];
         
         
-        _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(5.0f, HYSegmentedControl_Height-4.f, width4btn-10.0f, 3.0f)];
+        _bottomLineView = [[UIView alloc] init];
         _bottomLineView.backgroundColor = [UIColor colorWithHexString:HOMEPAGECOLOR_BOSS];
         [_scrollView addSubview:_bottomLineView];
         
@@ -201,7 +211,7 @@
     }
     
     CGRect rect4boottomLine = self.bottomLineView.frame;
-    rect4boottomLine.origin.x = btn.frame.origin.x +5;
+    rect4boottomLine.origin.x = btn.frame.origin.x +0;
     
     CGPoint pt = CGPointZero;
     BOOL canScrolle = NO;

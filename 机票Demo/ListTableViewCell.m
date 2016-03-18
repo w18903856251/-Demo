@@ -29,7 +29,7 @@
 @property (nonatomic,strong)  UILabel        *Airlinesinfo;
 
 @property (nonatomic,strong)  UILabel        *Ticketprice; //机票价格
-
+@property (nonatomic)         UIImageView    *backimageview;
 @property (nonatomic,assign)    BOOL           lastOne;
 @end
 
@@ -51,6 +51,13 @@
         
     UIColor * blackColor = [UIColor blackColor];
     UIFont  *font = [UIFont systemFontOfSize:14];
+        
+        
+        _backimageview = [[UIImageView alloc]init];
+        
+        _backimageview.backgroundColor =[UIColor clearColor];
+        [self.contentView addSubview:_backimageview];
+        
     self.Datestar =  [AppUtils creatNormalLabel:blackColor align:NSTextAlignmentCenter font:font parent:self.contentView];
     self.Divider  =  [AppUtils creatNormalLabel:blackColor align:NSTextAlignmentCenter font:font parent:self.contentView];
     self.Datefininsh  = [AppUtils creatNormalLabel:blackColor align:NSTextAlignmentCenter font:font parent:self.contentView];
@@ -94,7 +101,10 @@
         [super layoutSubviews];
         
     
-        
+    _backimageview.frame = CGRectMake(0, 0, SCREEN_WIDTH-30, 110);
+    _backimageview.layer.borderWidth = 1;
+    _backimageview.layer.borderColor = [[UIColor grayColor] CGColor];
+    
         _Datestar.frame = CGRectMake(15, 5, (SCREEN_WIDTH-30)/4 , 20);
         
         _Divider.frame = CGRectMake(_Datestar.right, _Datestar.top, _Datestar.width, 20);
@@ -295,6 +305,8 @@
 
 @property (nonatomic,strong)  UIButton       *Bookingbutton; //预订按钮
 
+
+@property (nonatomic)         UIImageView    *backimageview;
 @property (nonatomic,assign)    BOOL           lastOne;
 @end
 
@@ -316,6 +328,11 @@
         
         UIColor * blackColor = [UIColor blackColor];
         UIFont  *font = [UIFont systemFontOfSize:14];
+        
+        _backimageview = [[UIImageView alloc]init];
+        
+        _backimageview.backgroundColor =[UIColor clearColor];
+        [self.contentView addSubview:_backimageview];
         self.Positions =  [AppUtils creatNormalLabel:blackColor align:NSTextAlignmentCenter font:font parent:self.contentView];
         self.Endorse  =  [AppUtils creatNormalLabel:blackColor align:NSTextAlignmentCenter font:font parent:self.contentView];
         self.Votes  = [AppUtils creatNormalLabel:blackColor align:NSTextAlignmentCenter font:font parent:self.contentView];
@@ -351,7 +368,9 @@
 {
     [super layoutSubviews];
     
-    
+    _backimageview.frame = CGRectMake(15, 0, SCREEN_WIDTH-30, 80);
+    _backimageview.layer.borderWidth = 1;
+    _backimageview.layer.borderColor = [[UIColor grayColor] CGColor];
     _Positions.frame = CGRectMake(15, 15, (SCREEN_WIDTH-30)/4 , 20);
     _Positions.backgroundColor = [UIColor yellowColor];
     _Endorse.frame = CGRectMake(_Positions.left, _Positions.bottom+10, _Positions.width, 20);
@@ -411,9 +430,6 @@
 #pragma mark -  按钮 点击
 - (void)cellBtnClicked:(UIButton *)btn
 {
-//    if (btn) {
-//        self.btn();
-//    }
     
     if (self.btnClickBlock){
         

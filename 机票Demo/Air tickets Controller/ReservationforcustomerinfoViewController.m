@@ -8,16 +8,25 @@
 
 #import "ReservationforcustomerinfoViewController.h"
 #import "ReservationforcustomerinfoHeadView.h"
-
+#import "PayMoneyViewController.h"
 
 #import "UserBookingTableViewCell.h"
 #define kUserBookingTableViewCellIdentifier     @"UserBookingTableViewCellIdentifier"
 
+#define  kNewCustomerSectionHeaderIdentifier @"NewCustomerSectionHeaderIdentifier"
+
+#define kUserInsuranceTableViewCellIdentifier @"UserInsuranceTableViewCellIdentifier"
+#define kUserReimbursementTableViewCellIdentifier @"UserReimbursementTableViewCellIdentifier"
+#define kUserPayMoneyTableViewCellIdentifier @"UserPayMoneyTableViewCellIdentifier"
+
+#import "HXNewCustomerSectionHeader.h"
 @interface ReservationforcustomerinfoViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 @property (nonatomic,strong) UITableView  *UserTableview;
 
 @property (nonatomic,strong)  NSMutableArray           *sectionTitles;
 @property (nonatomic,strong)  NSMutableArray           *dataSource;
+
+@property (strong, nonatomic)  BaseGroupTableViewController *dataDelegate;
 @end
 
 @implementation ReservationforcustomerinfoViewController
@@ -28,34 +37,42 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    self.UserTableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, SCREEN_HEIGHT-64)];
-    self.UserTableview.tag =1;
-    [self.UserTableview registerClass:[UserBookingTableViewCell class] forCellReuseIdentifier:kUserBookingTableViewCellIdentifier];
     
+    self.groupTable.delegate = self;
+    self.groupTable.dataSource =self;
+    self.groupTable.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    [self.groupTable registerClass:[UserBookingTableViewCell class] forCellReuseIdentifier:kUserBookingTableViewCellIdentifier];
+    [self.groupTable registerClass:[HXNewCustomerSectionHeader class] forHeaderFooterViewReuseIdentifier:kNewCustomerSectionHeaderIdentifier];
+    [self.groupTable registerClass:[UserInsuranceTableViewCell class] forCellReuseIdentifier:kUserInsuranceTableViewCellIdentifier];
+     [self.groupTable registerClass:[UserReimbursementTableViewCell class] forCellReuseIdentifier:kUserReimbursementTableViewCellIdentifier];
     
+    [self.groupTable registerClass:[UserPayMoneyTableViewCell class] forCellReuseIdentifier:kUserPayMoneyTableViewCellIdentifier];
     
-//    [UIView animateWithDuration:.25f delay:.1f options:UIViewAnimationOptionCurveEaseInOut animations:^{
-//        self.UserTableview.frame = CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT-64);
-//        
-//    } completion:^(BOOL finished) {
-//        
-//        //        [_nameTf becomeFirstResponder];
-//    }];
+    //*
+//    TicketseatHeadView  *SeatHeader = [[TicketseatHeadView alloc] initWithFrame:CGRectMake(0.f,0.f,self.view.width,[TicketseatHeadView calculateCellHeight])];
+//    self.groupTable.tableHeaderView = SeatHeader;
     
     //*
     ReservationforcustomerinfoHeadView  *customerHeader = [[ReservationforcustomerinfoHeadView alloc] initWithFrame:CGRectMake(0.f,0.f,self.view.width,[ReservationforcustomerinfoHeadView calculateCellHeight])];
-    customerHeader.backgroundColor =[UIColor grayColor];
-    self.UserTableview.tableHeaderView = customerHeader;
+    
+    self.groupTable.tableHeaderView = customerHeader;
+    
+    
+    UIView * aview = [[UIView alloc] initWithFrame:CGRectMake(10.f,10.f,self.view.width-10*2,[ReservationforcustomerinfoHeadView calculateCellHeight]-20)];
+    //添加边框
+    CALayer * layer = [aview layer];
+    layer.borderColor = [
+                         [UIColor blackColor] CGColor];
+    layer.borderWidth = 1.0f;
     
     [customerHeader configureHeaderData:_objData configureshippingspaceHeadData:_spaceobjData];
-   
-    self.UserTableview.tableFooterView = [[UIView alloc]init];
-    self.UserTableview.dataSource =self;
-    self.UserTableview.delegate = self;
-    [self.view addSubview:self.UserTableview];
+    
+    [customerHeader addSubview:aview];
+
     
     [self configureDataSource];
 
+    
     
 }
 
@@ -70,22 +87,51 @@
        
                        // 配置  添加客户
             customerInfo  =
-            @[@{@"cellType":@"0",@"eventType":@"input",@"info":@[@"姓名",@"与乘机证件一致"],@"keyboard":@"default",@"limit":@"0",@"inputKey":@"name"},@{@"cellType":@"0",@"eventType":@"Document",@"info":@[@"证件类型",@"身份证"],@"limit":@"0",@"DocumentKey":@"Document"},@{@"cellType":@"0",@"eventType":@"input",@"info":@[@"证件号码",@"与乘机证件一致"],@"keyboard":@"default",@"limit":@"0",@"inputKey":@"name"},];
+            @[@{@"cellType":@"0",@"eventType":@"input",@"info":@[@"姓名",@"与乘机证件一致"],@"keyboard":@"default",@"limit":@"0",@"inputKey":@"name"},@{@"cellType":@"0",@"eventType":@"Document",@"info":@[@"证件类型",@"身份证"],@"limit":@"0",@"DocumentKey":@"Document"},@{@"cellType":@"0",@"eventType":@"input",@"info":@[@"证件号码",@"与乘机证件一致"],@"keyboard":@"default",@"limit":@"0",@"inputKey":@"certificatenum"},];
         
-        
+       // [_dataDelegate addModels:customerInfo];
         
         [self.dataSource addObject:customerInfo];
-        [self.sectionTitles addObject:@[@"客户信息"]];
+        [self.sectionTitles addObject:@[@"乘机人"]];
         
         
-//        NSArray * customerInfos = @[
-//                                    @{@"cellType":@"6",@"eventType":@"input",@"info":@[@"联系人",@"联系人姓名"],@"keyboard":@"default",@"limit":@"0",@"inputKey":@"name"},
-//                                    @{@"cellType":@"0",@"eventType":@"input",@"info":@[@"联系电话",@"请输入联系号码"],@"keyboard":@"phone",@"limit":@"0",@"inputKey":@"phone"},
-//                                    @{@"cellType":@"0",@"eventType":@"input",@"info":@[@"微信号",@"请输入微信号码"],@"keyboard":@"default",@"limit":@"0",@"inputKey":@"weixin"},
-//                                    @{@"cellType":@"0",@"eventType":@"city",@"info":@[@"销售归属",@"归属人名称"],@"limit":@"0",@"cityKey":@"city"}];
-//        
-//        [self.dataSource addObject:customerInfos];
-//        [self.sectionTitles addObject:@[@"123"]];
+        NSArray  *TelephonecustomerInfo;
+        
+        // 配置  联系人
+        TelephonecustomerInfo  =
+        @[@{@"cellType":@"0",@"eventType":@"input",@"info":@[@"姓名",@"请填写联系人姓名"],@"keyboard":@"default",@"limit":@"0",@"inputKey":@"name"},@{@"cellType":@"0",@"eventType":@"input",@"info":@[@"手机",@"请填写联系人手机"],@"keyboard":@"default",@"limit":@"0",@"inputKey":@"telephone"}];
+        
+        [self.dataSource addObject:TelephonecustomerInfo];
+        [self.sectionTitles addObject:@[@"联系人"]];
+        
+        
+        NSArray  *InsuranceInfo;
+        
+        // 配置  保险
+        InsuranceInfo  =
+        @[@{@"cellType":@"1",@"eventType":@"input",@"info":@[@"航空意外险",@"最高保额￥320万,放心出行",@"￥20/份"]},@{@"cellType":@"1",@"eventType":@"input",@"info":@[@"航空延误险",@"最高保额￥320万,放心出行",@"￥20/份"]}];
+        
+        [self.dataSource addObject:InsuranceInfo];
+        [self.sectionTitles addObject:@[@"航空保险"]];
+        
+        
+        NSArray  *ReimbursementInfo;
+        
+        // 配置 报销凭证
+        ReimbursementInfo  =
+        @[@{@"cellType":@"2",@"eventType":@"input",@"info":@[@"是否报销凭证",@"123"]}];
+        
+        [self.dataSource addObject:ReimbursementInfo];
+        [self.sectionTitles addObject:@[@"报销凭证"]];
+        
+        NSArray  *PayMoney;
+        
+        PayMoney  =
+        @[@{@"cellType":@"3",@"eventType":@"input",@"info":@[@"成人票:￥1150X1",@"机建+燃油:50X1",@"保险: (￥20 + ￥20) X1",@"1240"]}];
+        
+        [self.dataSource addObject:PayMoney];
+        [self.sectionTitles addObject:@[@"须知。。。。"]];
+        
         
     }
 }
@@ -117,7 +163,9 @@
     __weak   ReservationforcustomerinfoViewController  *ctrl = self;
     NSString  *key = nil; //values 中键的名称
     
-    UserBookingTableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:kUserBookingTableViewCellIdentifier forIndexPath:indexPath];
+    if ([cellInfoDict[@"cellType"] integerValue] == 0) {
+        
+      UserBookingTableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:kUserBookingTableViewCellIdentifier forIndexPath:indexPath];
     
     
      [cell configureCellContent:cellInfoDict[@"info"]];
@@ -140,20 +188,78 @@
     
     
     
-    return cell;
+        return cell;
+    }else  if ([cellInfoDict[@"cellType"] integerValue] == 1) {
+        
+        UserInsuranceTableViewCell * cell= [tableView dequeueReusableCellWithIdentifier:kUserInsuranceTableViewCellIdentifier  forIndexPath:indexPath];
+        
+        [cell configureCellContent:cellInfoDict[@"info"]];
+        
+        cell.btnClickBlock = ^(id cell, NSUInteger index){
+            
+            index = indexPath.row;
+            [self Selectchick:cell index:indexPath.row];
+            
+            
+            
+        };
+        
+        return cell;
+
+       
+    }else if([cellInfoDict[@"cellType"] integerValue] == 2) {
+        
+        UserReimbursementTableViewCell * cell= [tableView dequeueReusableCellWithIdentifier:kUserReimbursementTableViewCellIdentifier forIndexPath:indexPath];
+        
+        [cell configureCellContent: cellInfoDict[@"info"]];
+        
+        cell.btnClickBlock = ^(id cell, NSUInteger index){
+            
+            index = indexPath.row;
+            [self Selectchick:cell index:indexPath.row];
+            
+            
+            
+        };
+        return cell;
+    }else{
+        UserPayMoneyTableViewCell * cell= [tableView dequeueReusableCellWithIdentifier:kUserPayMoneyTableViewCellIdentifier forIndexPath:indexPath];
+        
+        [cell configureCellContent: cellInfoDict[@"info"]];
+        
+        cell.btnClickBlock = ^(id cell, NSUInteger index){
+            
+            index = indexPath.row;
+            
+            [self PayMoneyVC];
+            
+            
+        };
+        return cell;
+        
+    }
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    return 44;
+    
+    if (indexPath.section==2) {
+        return 64;
+    }else if (indexPath.section==4){
+        return 144;
+    }
+    else{
+        
+        return 44;
+    }
     
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 15;
+    return 25;
     
 }
 
@@ -164,13 +270,22 @@
     
     NSDictionary  *cellInfoDict = self.dataSource[indexPath.section][indexPath.row];
     if ([cellInfoDict[@"eventType"] isEqualToString:@"input"]) {
-//        if ([cellInfoDict[@"cellType"] integerValue]==5 && [[_interacts valueForKey:cellInfoDict[@"inputKey"]] boolValue]== YES){
-//            return;
-//        }
         //单行输入 只在当前页面 输入
         //        [self navToInputControll:cell infoDict:cellInfoDict];
+    }else if ([cellInfoDict[@"eventType"] isEqualToString:@"Document"]){
+        debugLog(@"选择");
     }
     
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    
+    if ([self.sectionTitles[section] count]!=0) {
+                HXNewCustomerSectionHeader  *sectionHeader = [tableView dequeueReusableHeaderFooterViewWithIdentifier:kNewCustomerSectionHeaderIdentifier];;
+        [sectionHeader configureHeaderData:_sectionTitles[section]];
+        return sectionHeader;
+    }else return nil;
 }
 
 
@@ -227,6 +342,35 @@
     [self.UserTableview scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
+
+//  点击选中
+
+-(void)Selectchick:(id)cell index:(NSUInteger)btnIndex{
+
+     UserInsuranceTableViewCell *normalCell = (UserInsuranceTableViewCell *)cell;
+    
+    if (normalCell.Insurancebutton.tag==0) {
+        normalCell.Insurancebutton.tag = 1;
+        [normalCell.Insurancebutton setImage:[UIImage imageNamed:@"checkboxons"] forState:UIControlStateNormal];
+    }else if (normalCell.Insurancebutton.tag==1){
+        normalCell.Insurancebutton.tag=0;
+        [normalCell.Insurancebutton setImage:[UIImage imageNamed:@"checkbox"] forState:UIControlStateNormal];
+    }
+    
+    
+
+}
+
+
+//跳转支付页面
+
+-(void) PayMoneyVC{
+    
+    PayMoneyViewController * paymoney = [[PayMoneyViewController alloc]init];
+    
+    [self pushViewController:paymoney];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

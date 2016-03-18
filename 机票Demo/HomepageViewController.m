@@ -25,13 +25,16 @@
     [super viewDidLoad];
     
     
-    self.imageview = [[UIImageView alloc]initWithFrame:CGRectMake(50, 200, 80, 80)];
-    self.titlelabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 20, 60, 40)];
+    self.imageview = [[UIImageView alloc]initWithFrame:CGRectMake(LEFTMARGIN, IOS_STATUSBAR_HEIGHT *2+IOS_NAVBAR_HEIGHT , (SCREEN_WIDTH-15*2)/4, (SCREEN_WIDTH-15*2)/4)];
+    
+    UIColor * blackColor = [UIColor blackColor];
+    UIFont  *font = [UIFont systemFontOfSize:14];
+    
+    self.titlelabel =  [AppUtils creatNormalLabel:blackColor align:NSTextAlignmentCenter font:font parent:self.imageview];
+    self.titlelabel.frame = CGRectMake(0, 0, self.imageview.width, self.imageview.height);
+
     self.titlelabel.text  = @"机票列表";
-    self.titlelabel.textAlignment = NSTextAlignmentCenter;
-    self.titlelabel.font = [UIFont systemFontOfSize:12];
-    [self.imageview addSubview:self.titlelabel];
-    self.imageview.backgroundColor = [UIColor yellowColor];
+    self.imageview.backgroundColor = [UIColor colorWithHexString:HOMEPAGECOLOR_BOSS];
     
     UITapGestureRecognizer * tapWLBLs = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event:)];
     //[tapWLBLs setNumberOfTouchesRequired:3];
@@ -44,12 +47,12 @@
     [self.view addSubview:self.imageview];
     
 
-    
-    // Do any additional setup after loading the view.
 }
 
+// 点击机票事件
 -(void)event:(UITapGestureRecognizer *)sender{
     
+    // 跳转机票搜索页面
     
     SearchTicketViewController * searchticker = [[SearchTicketViewController alloc]init];
     

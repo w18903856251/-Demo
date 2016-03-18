@@ -22,9 +22,22 @@
 		FE06C4681C8D60010063BAD3 /* AirlineseatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C4671C8D60010063BAD3 /* AirlineseatViewController.m */; };
 		FE06C46B1C8D6EC60063BAD3 /* Ticketseat.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C46A1C8D6EC60063BAD3 /* Ticketseat.m */; };
 		FE06C46E1C8D7EED0063BAD3 /* TicketseatHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE06C46D1C8D7EED0063BAD3 /* TicketseatHeadView.m */; };
+		FE2FCA3C1C9BC74A00F2938F /* cancelBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCA2B1C9BC74A00F2938F /* cancelBtn@2x.png */; };
+		FE2FCA3D1C9BC74A00F2938F /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCA2C1C9BC74A00F2938F /* citydict.plist */; };
+		FE2FCA3E1C9BC74A00F2938F /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCA2F1C9BC74A00F2938F /* CityViewController.m */; };
+		FE2FCA3F1C9BC74A00F2938F /* ResultCityController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCA311C9BC74A00F2938F /* ResultCityController.m */; };
+		FE2FCA401C9BC74A00F2938F /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCA341C9BC74A00F2938F /* CityModel.m */; };
+		FE2FCA411C9BC74A00F2938F /* CityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCA371C9BC74A00F2938F /* CityTableViewCell.m */; };
+		FE2FCA421C9BC74A00F2938F /* CustomSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCA391C9BC74A00F2938F /* CustomSearchView.m */; };
+		FE2FCA431C9BC74A00F2938F /* CustomTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCA3B1C9BC74A00F2938F /* CustomTopView.m */; };
+		FE2FCA491C9BE87F00F2938F /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCA481C9BE87F00F2938F /* checkbox.png */; };
+		FE2FCA4B1C9BE8C800F2938F /* checkboxons.png in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCA4A1C9BE8C800F2938F /* checkboxons.png */; };
+		FE2FCA4E1C9BFD2300F2938F /* PayMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCA4D1C9BFD2300F2938F /* PayMoneyViewController.m */; };
+		FE6D9E861C966C26001D82DA /* HXNewCustomerSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6D9E851C966C26001D82DA /* HXNewCustomerSectionHeader.m */; };
 		FE7BE3DB1C92B10F004996B7 /* BaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3DA1C92B10F004996B7 /* BaseAnimation.m */; };
 		FE7BE3DE1C92B521004996B7 /* ModalAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3DD1C92B521004996B7 /* ModalAnimation.m */; };
 		FE7BE3E11C92BB6E004996B7 /* ScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3E01C92BB6E004996B7 /* ScaleAnimation.m */; };
+		FEA7D9C61C9A7BA800BDD96F /* FlightSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA7D9C51C9A7BA800BDD96F /* FlightSearchCell.m */; };
 		FEB03E8E1C9113D500077B67 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E8D1C9113D500077B67 /* BaseViewController.m */; };
 		FEB03E921C9115C700077B67 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E911C9115C700077B67 /* HomepageViewController.m */; };
 		FEB03E951C911EEA00077B67 /* BaseGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E941C911EEA00077B67 /* BaseGroupTableViewController.m */; };
@@ -98,12 +111,36 @@
 		FE06C46A1C8D6EC60063BAD3 /* Ticketseat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticketseat.m; sourceTree = "<group>"; };
 		FE06C46C1C8D7EED0063BAD3 /* TicketseatHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketseatHeadView.h; sourceTree = "<group>"; };
 		FE06C46D1C8D7EED0063BAD3 /* TicketseatHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketseatHeadView.m; sourceTree = "<group>"; };
+		FE2FCA2B1C9BC74A00F2938F /* cancelBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelBtn@2x.png"; sourceTree = "<group>"; };
+		FE2FCA2C1C9BC74A00F2938F /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		FE2FCA2E1C9BC74A00F2938F /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
+		FE2FCA2F1C9BC74A00F2938F /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
+		FE2FCA301C9BC74A00F2938F /* ResultCityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCityController.h; sourceTree = "<group>"; };
+		FE2FCA311C9BC74A00F2938F /* ResultCityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultCityController.m; sourceTree = "<group>"; };
+		FE2FCA331C9BC74A00F2938F /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
+		FE2FCA341C9BC74A00F2938F /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
+		FE2FCA361C9BC74A00F2938F /* CityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableViewCell.h; sourceTree = "<group>"; };
+		FE2FCA371C9BC74A00F2938F /* CityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableViewCell.m; sourceTree = "<group>"; };
+		FE2FCA381C9BC74A00F2938F /* CustomSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchView.h; sourceTree = "<group>"; };
+		FE2FCA391C9BC74A00F2938F /* CustomSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchView.m; sourceTree = "<group>"; };
+		FE2FCA3A1C9BC74A00F2938F /* CustomTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTopView.h; sourceTree = "<group>"; };
+		FE2FCA3B1C9BC74A00F2938F /* CustomTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTopView.m; sourceTree = "<group>"; };
+		FE2FCA481C9BE87F00F2938F /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
+		FE2FCA4A1C9BE8C800F2938F /* checkboxons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxons.png; sourceTree = "<group>"; };
+		FE2FCA4C1C9BFD2300F2938F /* PayMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayMoneyViewController.h; sourceTree = "<group>"; };
+		FE2FCA4D1C9BFD2300F2938F /* PayMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayMoneyViewController.m; sourceTree = "<group>"; };
+		FE6D9E841C966C26001D82DA /* HXNewCustomerSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNewCustomerSectionHeader.h; sourceTree = "<group>"; };
+		FE6D9E851C966C26001D82DA /* HXNewCustomerSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNewCustomerSectionHeader.m; sourceTree = "<group>"; };
 		FE7BE3D91C92B10F004996B7 /* BaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimation.h; sourceTree = "<group>"; };
 		FE7BE3DA1C92B10F004996B7 /* BaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimation.m; sourceTree = "<group>"; };
 		FE7BE3DC1C92B521004996B7 /* ModalAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalAnimation.h; sourceTree = "<group>"; };
 		FE7BE3DD1C92B521004996B7 /* ModalAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalAnimation.m; sourceTree = "<group>"; };
 		FE7BE3DF1C92BB6E004996B7 /* ScaleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleAnimation.h; sourceTree = "<group>"; };
 		FE7BE3E01C92BB6E004996B7 /* ScaleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleAnimation.m; sourceTree = "<group>"; };
+		FEA7D9C21C9A44ED00BDD96F /* GeneralMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralMacro.h; sourceTree = "<group>"; };
+		FEA7D9C31C9A453600BDD96F /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
+		FEA7D9C41C9A7BA800BDD96F /* FlightSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightSearchCell.h; sourceTree = "<group>"; };
+		FEA7D9C51C9A7BA800BDD96F /* FlightSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightSearchCell.m; sourceTree = "<group>"; };
 		FEB03E8C1C9113D500077B67 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = ../BaseViewController.h; sourceTree = "<group>"; };
 		FEB03E8D1C9113D500077B67 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = ../BaseViewController.m; sourceTree = "<group>"; };
 		FEB03E901C9115C700077B67 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
@@ -199,6 +236,7 @@
 		FE06C4431C8D2DB00063BAD3 /* Three parties */ = {
 			isa = PBXGroup;
 			children = (
+				FE2FCA2A1C9BC74A00F2938F /* selectCity */,
 				FE06C4601C8D46080063BAD3 /* AppUtils.h */,
 				FE06C4611C8D460F0063BAD3 /* AppUtils.m */,
 				FE06C4631C8D4A1F0063BAD3 /* UIView+frame.h */,
@@ -233,6 +271,51 @@
 			path = ZFCalendar;
 			sourceTree = "<group>";
 		};
+		FE2FCA2A1C9BC74A00F2938F /* selectCity */ = {
+			isa = PBXGroup;
+			children = (
+				FE2FCA2B1C9BC74A00F2938F /* cancelBtn@2x.png */,
+				FE2FCA2C1C9BC74A00F2938F /* citydict.plist */,
+				FE2FCA2D1C9BC74A00F2938F /* Controller */,
+				FE2FCA321C9BC74A00F2938F /* Model */,
+				FE2FCA351C9BC74A00F2938F /* View */,
+			);
+			path = selectCity;
+			sourceTree = "<group>";
+		};
+		FE2FCA2D1C9BC74A00F2938F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE2FCA2E1C9BC74A00F2938F /* CityViewController.h */,
+				FE2FCA2F1C9BC74A00F2938F /* CityViewController.m */,
+				FE2FCA301C9BC74A00F2938F /* ResultCityController.h */,
+				FE2FCA311C9BC74A00F2938F /* ResultCityController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE2FCA321C9BC74A00F2938F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE2FCA331C9BC74A00F2938F /* CityModel.h */,
+				FE2FCA341C9BC74A00F2938F /* CityModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE2FCA351C9BC74A00F2938F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE2FCA361C9BC74A00F2938F /* CityTableViewCell.h */,
+				FE2FCA371C9BC74A00F2938F /* CityTableViewCell.m */,
+				FE2FCA381C9BC74A00F2938F /* CustomSearchView.h */,
+				FE2FCA391C9BC74A00F2938F /* CustomSearchView.m */,
+				FE2FCA3A1C9BC74A00F2938F /* CustomTopView.h */,
+				FE2FCA3B1C9BC74A00F2938F /* CustomTopView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FEB03E8F1C91140700077B67 /* Thebaseclass */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +329,8 @@
 				FE7BE3DD1C92B521004996B7 /* ModalAnimation.m */,
 				FE7BE3DF1C92BB6E004996B7 /* ScaleAnimation.h */,
 				FE7BE3E01C92BB6E004996B7 /* ScaleAnimation.m */,
+				FE6D9E841C966C26001D82DA /* HXNewCustomerSectionHeader.h */,
+				FE6D9E851C966C26001D82DA /* HXNewCustomerSectionHeader.m */,
 			);
 			path = Thebaseclass;
 			sourceTree = "<group>";
@@ -265,6 +350,8 @@
 				FEC8D1CA1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m */,
 				FEC8D1CC1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.h */,
 				FEC8D1CD1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m */,
+				FE2FCA4C1C9BFD2300F2938F /* PayMoneyViewController.h */,
+				FE2FCA4D1C9BFD2300F2938F /* PayMoneyViewController.m */,
 			);
 			path = "Air tickets Controller";
 			sourceTree = "<group>";
@@ -276,6 +363,8 @@
 				FEDBA79B1C88207700D1EF64 /* ListTableViewCell.m */,
 				FEC8D1CF1C8FFF7300357F2A /* UserBookingTableViewCell.h */,
 				FEC8D1D01C8FFF7300357F2A /* UserBookingTableViewCell.m */,
+				FEA7D9C41C9A7BA800BDD96F /* FlightSearchCell.h */,
+				FEA7D9C51C9A7BA800BDD96F /* FlightSearchCell.m */,
 			);
 			path = "Air tickets Cell";
 			sourceTree = "<group>";
@@ -332,6 +421,8 @@
 		FEDBA7501C87CCD900D1EF64 /* 机票Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FE2FCA481C9BE87F00F2938F /* checkbox.png */,
+				FE2FCA4A1C9BE8C800F2938F /* checkboxons.png */,
 				FEDBA7541C87CCD900D1EF64 /* AppDelegate.h */,
 				FEDBA7551C87CCD900D1EF64 /* AppDelegate.m */,
 				FEB03E901C9115C700077B67 /* HomepageViewController.h */,
@@ -381,6 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				FEDBA78A1C87D9CF00D1EF64 /* APIConfig.h */,
+				FEA7D9C31C9A453600BDD96F /* AppMacro.h */,
+				FEA7D9C21C9A44ED00BDD96F /* GeneralMacro.h */,
 				FEDBA7871C87D90700D1EF64 /* RTHttpClient.h */,
 				FEDBA7881C87D90E00D1EF64 /* RTHttpClient.m */,
 				FEDBA78B1C87DE7D00D1EF64 /* Publicrequest.h */,
@@ -495,9 +588,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2FCA4B1C9BE8C800F2938F /* checkboxons.png in Resources */,
+				FE2FCA3D1C9BC74A00F2938F /* citydict.plist in Resources */,
 				FEDBA75E1C87CCD900D1EF64 /* Assets.xcassets in Resources */,
 				FE06C45E1C8D2DBA0063BAD3 /* chack.png in Resources */,
 				FEDBA75C1C87CCD900D1EF64 /* Main.storyboard in Resources */,
+				FE2FCA3C1C9BC74A00F2938F /* cancelBtn@2x.png in Resources */,
+				FE2FCA491C9BE87F00F2938F /* checkbox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,23 +676,30 @@
 				FE7BE3DB1C92B10F004996B7 /* BaseAnimation.m in Sources */,
 				FEB03E951C911EEA00077B67 /* BaseGroupTableViewController.m in Sources */,
 				FEDBA7561C87CCD900D1EF64 /* AppDelegate.m in Sources */,
+				FE2FCA3E1C9BC74A00F2938F /* CityViewController.m in Sources */,
+				FE2FCA411C9BC74A00F2938F /* CityTableViewCell.m in Sources */,
 				FEB549D21C897FC300F7DFD7 /* Conversionofweek.m in Sources */,
 				FEB549C41C89291900F7DFD7 /* SearchTicketViewController.m in Sources */,
 				FEDBA7901C87E10F00D1EF64 /* TicketListViewController.m in Sources */,
 				FE06C45D1C8D2DBA0063BAD3 /* CalendarViewController.m in Sources */,
 				FEDBA7891C87D90E00D1EF64 /* RTHttpClient.m in Sources */,
+				FE2FCA3F1C9BC74A00F2938F /* ResultCityController.m in Sources */,
 				FE06C4591C8D2DBA0063BAD3 /* CalendarHomeViewController.m in Sources */,
 				FEDBA7931C88070300D1EF64 /* TicketListEntity.m in Sources */,
 				FEC8D1CB1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m in Sources */,
+				FEA7D9C61C9A7BA800BDD96F /* FlightSearchCell.m in Sources */,
 				FE06C45B1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.m in Sources */,
 				FEC8D1D11C8FFF7300357F2A /* UserBookingTableViewCell.m in Sources */,
+				FE6D9E861C966C26001D82DA /* HXNewCustomerSectionHeader.m in Sources */,
 				FEB549C71C892EC300F7DFD7 /* UIColor+HexString.m in Sources */,
 				FE06C45A1C8D2DBA0063BAD3 /* CalendarLogic.m in Sources */,
 				FE06C4581C8D2DBA0063BAD3 /* CalendarDayModel.m in Sources */,
+				FE2FCA4E1C9BFD2300F2938F /* PayMoneyViewController.m in Sources */,
 				FEB03E921C9115C700077B67 /* HomepageViewController.m in Sources */,
 				FE06C46E1C8D7EED0063BAD3 /* TicketseatHeadView.m in Sources */,
 				FE7BE3DE1C92B521004996B7 /* ModalAnimation.m in Sources */,
 				FEDBA78D1C87DE7D00D1EF64 /* Publicrequest.m in Sources */,
+				FE2FCA421C9BC74A00F2938F /* CustomSearchView.m in Sources */,
 				FE06C45C1C8D2DBA0063BAD3 /* CalendarMonthHeaderView.m in Sources */,
 				FE06C4621C8D460F0063BAD3 /* AppUtils.m in Sources */,
 				FE06C46B1C8D6EC60063BAD3 /* Ticketseat.m in Sources */,
@@ -603,6 +707,8 @@
 				FE06C4571C8D2DBA0063BAD3 /* CalendarDayCell.m in Sources */,
 				FE06C4651C8D4A1F0063BAD3 /* UIView+frame.m in Sources */,
 				FE06C4681C8D60010063BAD3 /* AirlineseatViewController.m in Sources */,
+				FE2FCA431C9BC74A00F2938F /* CustomTopView.m in Sources */,
+				FE2FCA401C9BC74A00F2938F /* CityModel.m in Sources */,
 				FEDBA7531C87CCD900D1EF64 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

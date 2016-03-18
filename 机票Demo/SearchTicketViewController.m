@@ -18,9 +18,19 @@
 #import "CalendarViewController.h"
 //#import "CalendarDayModel.h"
 #import "Color.h"
+#import "FlightSearchCell.h"
 
+#define kFlightSearchCellIdentifier   @"FlightSearchCellIdentifier"
+#define kFlightSearchDataCellsIdentifier  @"FlightSearchDataCellsIdentifier"
 
-@interface SearchTicketViewController ()<HYSegmentedControlDelegate>
+#define kFlightDoubleSearchDataCellsIdentifier  @"FlightDoubleSearchDataCellsIdentifier"
+#define kSearchCellIdentifier @"SearchCellIdentifier"
+
+#import "CityViewController.h"
+
+@interface SearchTicketViewController ()<HYSegmentedControlDelegate,UITableViewDelegate,UITableViewDataSource>
+
+@property (strong, nonatomic)  BaseGroupTableViewController *dataDelegate;
 
 @property (nonatomic) Conversionofweek         *conversionofweek;
 @property (nonatomic) UINavigationController   *navController;
@@ -48,53 +58,56 @@
 @property (nonatomic,strong)  CalendarHomeViewController * chvc;
 
 @property (nonatomic) UIButton                 *searchbutton; //搜索按钮
+
+
+
+
+@property (nonatomic)  NSMutableArray   *dataSourceArray;
+@property (nonatomic)  UITableView      *backtableview;
+
 @end
 
 @implementation SearchTicketViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     
     
-    self.navigationItem.title = @"国内机票";
-//    UIViewController *rootView = [[ UIViewController alloc ] init ];
+    self.navigationItem.title = @"国内/国际机票";
+    
+    _dataSourceArray = [[NSMutableArray alloc]initWithCapacity:3];
+    
+    //[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
+    
+    
+//    UIBarButtonItem *leftButton = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemAction target : self action : @selector (selectLeftAction:)];
 //    
-//    rootView. title = @"国内机票" ;
+//    leftButton. title = @"123" ;
 //    
-//    self . navController = [[ UINavigationController alloc ] init ];
+//    self. navigationItem . leftBarButtonItem = leftButton;
+//
+//    UIBarButtonItem *rightButton = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemAdd   target : self action : @selector (selectRightAction:)];
 //    
-//    [ self . navController pushViewController :rootView animated : YES ];
-//    
-//    [ self . view addSubview : self . navController . view ];
-//    
-//    self . navigationController . navigationBarHidden = YES ;
-    
-    UIBarButtonItem *leftButton = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemAction target : self action : @selector (selectLeftAction:)];
-    
-    leftButton. title = @"123" ;
-    
-    self. navigationItem . leftBarButtonItem = leftButton;
-    
-    UIBarButtonItem *rightButton = [[ UIBarButtonItem alloc ] initWithBarButtonSystemItem : UIBarButtonSystemItemAdd   target : self action : @selector (selectRightAction:)];
-    
-    self. navigationItem . rightBarButtonItem = rightButton;
+//    self. navigationItem . rightBarButtonItem = rightButton;
     
     //self.navigationItem.title = @"国内机票";
     // Do any additional setup after loading the view.
     
-    self.backview = [[UIView alloc]initWithFrame:CGRectMake(0, HeadHigh, SCREEN_WIDTH, SCREEN_HEIGHT-HeadHigh)];
-    self.backview.backgroundColor =[UIColor grayColor];
-    [self.view addSubview:self.backview];
-    self.label = [[UILabel alloc]initWithFrame:CGRectMake(0, 1 , self.view.frame.size.width, 30)];
-    self.label.backgroundColor = [UIColor colorWithHexString:@"#FFFFCC"];
-    self.label.text = @"微信订机票，价格更优惠";
-    self.label.textAlignment =  NSTextAlignmentCenter ;
-    [self.backview addSubview:self.label];
-
+//    self.backview = [[UIView alloc]initWithFrame:CGRectMake(0, HeadHigh, SCREEN_WIDTH, SCREEN_HEIGHT-HeadHigh)];
+//    self.backview.backgroundColor =[UIColor grayColor];
+//    [self.view addSubview:self.backview];
+    
+//    self.label = [[UILabel alloc]initWithFrame:CGRectMake(0, 1 , self.view.frame.size.width, 30)];
+//    self.label.backgroundColor = [UIColor colorWithHexString:@"#FFFFCC"];
+//    self.label.text = @"微信订机票，价格更优惠";
+//    self.label.textAlignment =  NSTextAlignmentCenter ;
+//    [self.backview addSubview:self.label];
+//
     
     
-    _segmentedControl  = [[HYSegmentedControl alloc] initWithOriginY:30+10 Titles:@[@"单程",@"往返"] delegate:self];
+    _segmentedControl  = [[HYSegmentedControl alloc] initWithOriginY:64+LEFTMARGIN  Titles:@[@"单程",@"往返"] delegate:self];
+    
+      _segmentedControl.bottomLineView.frame= CGRectMake(19.0f, 44-2.f, (SCREEN_WIDTH-30-10-4)/2, 2.0f);
     
 //    if (_sellIndex!=nil) {
 //        _segmentedControl.tableIndex = [_sellIndex intValue];
@@ -115,285 +128,144 @@
         
    // }
     
-    [self.backview addSubview:_segmentedControl];
+    [self.view addSubview:_segmentedControl];
     
-    
-    self.headview = [[UIView alloc]initWithFrame:CGRectMake(0, -100, SCREEN_WIDTH, 0)];
-    self.headview.backgroundColor = [UIColor colorWithHexString:@"3366FF" ];
-    [self.view addSubview:self.headview];
-    
-    
-    self.Upbutton = [[UIButton alloc]init];
-    [self.Upbutton setTitle:@" ^ " forState:UIControlStateNormal];
-    [self.Upbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //self.Upbutton.backgroundColor = [UIColor whiteColor];
-    [self.Upbutton addTarget:self action:@selector(UPChick:) forControlEvents: UIControlEventTouchUpInside];
-    [self.headview addSubview:self.Upbutton];
-
    
-    [self.Upbutton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.size.mas_equalTo(CGSizeMake(30, 30));
-        
-        make.top.mas_equalTo(25);
-        
-        make.right.mas_equalTo(-20);
-    }];
+    _backtableview = [[UITableView alloc]initWithFrame:CGRectMake(19, _segmentedControl.bottom+10, _segmentedControl.width+4, 300)];
+    _backtableview.delegate =self;
+    _backtableview.dataSource = self;
+    [self.view addSubview:_backtableview];
+//    self.groupTable.frame = CGRectMake(19.f,_segmentedControl.bottom+10,_segmentedControl.width+4,300);
+    _backtableview.layer.borderWidth = 1;
+   _backtableview.layer.borderColor = [[UIColor grayColor] CGColor];
+
+//    
+    //self.groupTable.delegate = self;
     
     
+    [_backtableview registerClass:[FlightSearchCell class] forCellReuseIdentifier:kFlightSearchCellIdentifier];
     
-    [self configurationInfo];
+    [_backtableview registerClass:[FlightSearchDataCell class] forCellReuseIdentifier:kFlightSearchDataCellsIdentifier];
+    
+    [_backtableview registerClass:[FlightDoubleSearchDataCell class] forCellReuseIdentifier:kFlightDoubleSearchDataCellsIdentifier];
+    
+    [_backtableview registerClass:[SearchCell class] forCellReuseIdentifier:kSearchCellIdentifier];
     
     
-    [ self configurationCityAndDateTime ];
+   
+
+    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    return 60;
     
 }
 
 
-// 配置动画表头内容
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    if (indexPath.row==0) {
+        FlightSearchCell *cell  = [tableView dequeueReusableCellWithIdentifier:kFlightSearchCellIdentifier forIndexPath:indexPath];
+        
+        [cell configureData];
+        
+        cell.btnClickBlock = ^(id celll,NSUInteger index){
+            
+            [self CitySelect:cell index:index];
+            
+        };
+        
+        return cell;
+    }else if (indexPath.row==1){
+        
+        if (_segmentedControl.tableIndex==0){
+        
+        FlightSearchDataCell *cell  = [tableView dequeueReusableCellWithIdentifier:kFlightSearchDataCellsIdentifier  forIndexPath:indexPath];
+        
+        
+        [cell configureDatas];
+        cell.ReturnData.hidden  = YES;
+        
+        cell.btnClickBlock = ^(id cell,NSUInteger index){
+            
+            [self Datechick:cell index:index];
+            
+        };
 
--(void)configurationInfo{
-    
-    self.headtitlelabel = [[UILabel alloc]initWithFrame:CGRectMake(Leftdistance, Topdistance, 200, 20)];
-    self.headtitlelabel.text = @"现在注册即可获取更多优惠";
-    self.headtitlelabel.font = [UIFont systemFontOfSize:14];
-    self.headtitlelabel.textColor = [UIColor whiteColor];
-    [self.headview addSubview:self.headtitlelabel];
-    
-    self.line = [[UILabel alloc]initWithFrame:CGRectMake(0, Topdistance+20, SCREEN_WIDTH, 1)];
-    self.line.backgroundColor =[UIColor whiteColor];
-    [self.headview addSubview:self.line];
-    
-    
-    [self.line mas_makeConstraints:^(MASConstraintMaker *make) {
+            return cell;
+        }else{
+            FlightDoubleSearchDataCell *cell  = [tableView dequeueReusableCellWithIdentifier:kFlightDoubleSearchDataCellsIdentifier  forIndexPath:indexPath];
+            
+            
+            [cell configureDatas];
+            
+            
+            cell.btnClickBlock = ^(id cell,NSUInteger index){
+                
+                //if (index==0) {
+                    [self Datechick:cell index:index];
+//                }else if (index==1){
+//                    [self Datechick:cell index:index];
+//                }
+                
+                
+            };
+            
+            return cell;
+            
+        }
         
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH, 1));
+    }else{
         
-        make.top.mas_equalTo(self.headtitlelabel.mas_bottom);
+        SearchCell * seachcell = [tableView dequeueReusableCellWithIdentifier:kSearchCellIdentifier  forIndexPath:indexPath];
+        [seachcell configureData];
+        seachcell.btnClickBlock = ^(id cell,NSUInteger index){
+            
+           
+            [self searchChick:seachcell];
+            
+            
+            
+        };
         
-        make.right.mas_equalTo(0);
-    }];
-    
-    self.loginview = [[UIImageView alloc]init];
-    self.loginview.backgroundColor = [UIColor whiteColor];
-    self.loginview.tag =1;
-    UITapGestureRecognizer * taplogin = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event:)];
-    
-    [self.loginview addGestureRecognizer:taplogin];
-    [self.loginview setUserInteractionEnabled:YES];
-    
-    [self.headview addSubview:self.loginview];
-    
-    self.registview = [[UIImageView alloc]init];
-    
-    self.registview.tag = 2;
-    
-    UITapGestureRecognizer * tapregist = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event:)];
-    
-    [self.registview addGestureRecognizer:tapregist];
-    [self.registview setUserInteractionEnabled:YES];
-    self.registview.backgroundColor =[UIColor whiteColor];
-    [self .headview addSubview:self.registview];
-    self.myorder = [[UIImageView alloc]init];
-    self.myorder.tag = 3;
-    
-    UITapGestureRecognizer * taporder = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(event:)];
-    
-    [self.myorder addGestureRecognizer:taporder];
-    [self.myorder setUserInteractionEnabled:YES];
-    
-    self.myorder.backgroundColor =[UIColor whiteColor];
-    [self.headview addSubview:self.myorder];
-    
-    [self.loginview mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH/3-1, 40));
-        
-        make.top.equalTo(self.line.mas_bottom).offset(5);
-        
-        make.left.mas_equalTo(0);
-    }];
-    
-    
-    [self.registview mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH/3-1, 40));
-        
-        make.top.equalTo(self.line.mas_bottom).offset(5);
-        
-        make.left.equalTo(self.loginview.mas_right).offset(1);
-        
-    }];
-    
-    
-    [self.myorder mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH/3-1, 40));
-        
-        make.top.equalTo(self.line.mas_bottom).offset(5);
-        
-        make.right.mas_equalTo(0);
-        
-    }];
-    
-    
-}
+        return seachcell;
 
-
-//配置view上城市和日期时间选择
-
--(void)configurationCityAndDateTime{
-    
-    self.originatingcity  = [[UIButton alloc]init];
-    self.originatingcity.backgroundColor = [UIColor whiteColor];
-    [self.originatingcity setTitle:@"上海" forState:UIControlStateNormal];
-    [self.originatingcity setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.backview addSubview:self.originatingcity];
-    
-    self.changebutton = [[UIButton alloc]init];
-    [self.changebutton setTitle:@"<->" forState:UIControlStateNormal];
-    self.changebutton.backgroundColor = [UIColor whiteColor];
-    self.changebutton.titleLabel.font = [UIFont systemFontOfSize:12];
-    [self.changebutton addTarget:self action:@selector(ChangCityChick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.changebutton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [self.backview addSubview:self.changebutton];
-    
-    self.destinationcity = [[UIButton alloc]init];
-    [self.destinationcity setTitle:@"天津" forState:UIControlStateNormal];
-    [self.destinationcity setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    self.destinationcity.backgroundColor =[UIColor whiteColor];
-    [self.backview addSubview:self.destinationcity];
-    
-    [self.originatingcity mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.size.mas_equalTo(CGSizeMake((SCREEN_WIDTH - 30-10-10-30)/2, 40));
-        
-        make.top.equalTo(_segmentedControl.bottomLineView.mas_bottom).offset(5);
-        
-        make.left.mas_equalTo(15);
-        
-    }];
-    
-    [self.changebutton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.size.mas_equalTo(CGSizeMake(30, 40));
-        
-        make.top.equalTo(_segmentedControl.bottomLineView.mas_bottom).offset(5);
-        
-        make.left.equalTo(self.originatingcity.mas_right).offset(10);
-        
-    }];
-    
-    [self.destinationcity mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.size.mas_equalTo(CGSizeMake((SCREEN_WIDTH - 30-10-10-30)/2, 40));
-        
-        make.top.equalTo(_segmentedControl.bottomLineView.mas_bottom).offset(5);
-        
-        make.left.equalTo(self.changebutton.mas_right).offset(10);
-        
-    }];
-    
-    
-    
-    self.Dateoneway = [[UIButton alloc]init];
-    
-    self.Dateoneway.backgroundColor = [UIColor whiteColor];
-    
-    
-    NSDate *currentDate = [NSDate date];//获取当前时间，日期
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MM月dd日"];
-    NSString *dateString = [dateFormatter stringFromDate:currentDate];
-    
-   NSString * date= [Conversionofweek weekdayStringFromDate:currentDate];
-    
-    [self.Dateoneway setTitle:[NSString stringWithFormat:@"%@  %@",dateString,date]  forState: UIControlStateNormal];
-    [self.Dateoneway setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.Dateoneway addTarget:self action:@selector(Datechick:) forControlEvents: UIControlEventTouchUpInside];
-    
-    [self.backview addSubview:self.Dateoneway];
-    [self.Dateoneway mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.size.mas_equalTo(CGSizeMake((SCREEN_WIDTH - 30-10-10-30)/2, 40));
-        
-        make.top.equalTo(_originatingcity.mas_bottom).offset(10);
-        
-        make.left.mas_equalTo(15);
-        
-    }];
-    
-    
-    self.searchbutton = [[UIButton alloc]init];
-    [self.searchbutton setTitle:@"搜索" forState: UIControlStateNormal];
-    [self.searchbutton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    [self.searchbutton addTarget:self action:@selector(searchChick:) forControlEvents: UIControlEventTouchUpInside];
-    
-    self.searchbutton.backgroundColor =[UIColor whiteColor];
-    [self.backview addSubview:self.searchbutton];
-    
-    
-    [self.searchbutton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 30, 40));
-        
-        make.top.equalTo(_Dateoneway.mas_bottom).offset(10);
-        
-        make.left.mas_equalTo(15);
-        
-    }];
-    
-}
-
-
--(void)UPChick:(id)sender{
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        // 设置view弹出来的位置
-        
-        _headview.frame = CGRectMake(0, -100, self.view.frame.size.width, 100);
-        
-        _backview.frame = CGRectMake(0, HeadHigh, SCREEN_WIDTH, SCREEN_HEIGHT-HeadHigh);
-    }];
-}
-
-
-
--(void)selectLeftAction:(id)sender{
-    
-//    [self dismissViewControllerAnimated:YES completion:^{
-//        
-//    }];
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
--(void)selectRightAction:(id)sender{
-    
-    [self.navigationController.view addSubview:_headview];
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        // 设置view弹出来的位置
-        
-        _headview.frame = CGRectMake(0, 0, self.view.frame.size.width, 100);
-        
-        _backview.frame = CGRectMake(0, 100, SCREEN_WIDTH, SCREEN_HEIGHT-HeadHigh-(100-HeadHigh));
-    }];
-}
-// 表头功能
--(void)event:(UITapGestureRecognizer *)sender{
- 
-    if (sender.view.tag==1) {
-        debugLog(@"跳转登录页面");
-        
-    }else if (sender.view.tag==2){
-        debugLog(@"跳转注册页面");
-    }else if (sender.view.tag==3){
-        debugLog(@"跳转我的订单页面");
     }
-
+    
+    
 }
+
+#pragma mark - HYSegmentedControlDelegate method
+- (void)hySegmentedControlSelectAtIndex:(NSInteger)index
+{
+   
+    
+   
+    _segmentedControl.tableIndex = index;
+    
+    if (index==0) {
+        
+
+        [_backtableview reloadData];
+        
+    }
+    else if (index==1) {
+        
+
+        [_backtableview reloadData];
+    }
+    
+}
+
 
 
 
@@ -415,7 +287,7 @@
 }
 // 日期选择
 
--(void)Datechick:(UIButton*)sender{
+-(void)Datechick:(id)cell index:(NSUInteger)btnIndex{
     
     
     
@@ -428,43 +300,69 @@
         [_chvc setAirPlaneToDay:365 ToDateforString:nil];//飞机初始化方法
         
         
-        
-        
-        
     }
-    
     
     
     
     
     _chvc.calendarblock = ^(CalendarDayModel *model){
         
-        NSLog(@"\n---------------------------");
-        NSLog(@"1星期 %@",[model getWeek]);
-        NSLog(@"2字符串 %@",[model toString]);
-        NSLog(@"3节日  %@",model.holiday);
+//        NSLog(@"\n---------------------------");
+//        NSLog(@"1星期 %@",[model getWeek]);
+//        NSLog(@"2字符串 %@",[model toString]);
+//        NSLog(@"3节日  %@",model.holiday);
         
-        if (model.holiday) {
-            
-            [sender setTitle:[NSString stringWithFormat:@"%@ %@ %@",[model toString],[model getWeek],model.holiday] forState:UIControlStateNormal];
-            
-        }else{
-            
-            [sender setTitle:[NSString stringWithFormat:@"%@ %@",[model toString],[model getWeek]] forState:UIControlStateNormal];
+
+        FlightSearchDataCell *normalCell = (FlightSearchDataCell *)cell;
+        if (btnIndex==0) {
+            [normalCell.StarData setTitle:[NSString stringWithFormat:@"%@ %@",[model toString],[model getWeek]] forState:UIControlStateNormal];
+        }
+        
+        FlightDoubleSearchDataCell *DoubleCell = (FlightDoubleSearchDataCell *)cell;
+        
+        if (btnIndex==0) {
+            [DoubleCell.StarData setTitle:[NSString stringWithFormat:@"%@ %@",[model toString],[model getWeek]] forState:UIControlStateNormal];
+        }else if (btnIndex==1){
+             [DoubleCell.ReturnData setTitle:[NSString stringWithFormat:@"%@ %@",[model toString],[model getWeek]] forState:UIControlStateNormal];
             
         }
+
+        
+        
     };
     
     [self.navigationController pushViewController:_chvc animated:YES];
 
 
 }
+
+//城市选择
+-(void)CitySelect:(id)cell index:(NSUInteger)btnIndex{
+    
+    FlightSearchCell * flightsearchcell = (FlightSearchCell*)cell;
+   
+    
+    CityViewController *controller = [[CityViewController alloc] init];
+    controller.currentCityString = @"杭州";
+    controller.selectString = ^(NSString *string){
+        if (btnIndex==0) {
+           [flightsearchcell.StarCityButton setTitle:string forState:UIControlStateNormal] ;
+        }else if (btnIndex==1){
+            [flightsearchcell.ReturnCityButton setTitle:string forState:UIControlStateNormal] ;
+        }
+        
+    };
+    [self presentViewController:controller animated:YES completion:nil];
+    
+}
+
+
 // 搜索按钮点击事件
--(void)searchChick:(UIButton*)sender{
+-(void)searchChick:(id)cell {
     
-    debugLog(@"123");
+   
     
-        TicketListViewController * ticketlistvc = [[TicketListViewController alloc]init];
+    TicketListViewController * ticketlistvc = [[TicketListViewController alloc]init];
     
     [self pushViewController:ticketlistvc];
     
