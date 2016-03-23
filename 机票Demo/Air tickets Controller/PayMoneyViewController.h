@@ -9,5 +9,5 @@
 #import "BaseGroupTableViewController.h"
 
 @interface PayMoneyViewController : BaseGroupTableViewController
-
+@property (nonatomic) NSDictionary * obj;
 @end

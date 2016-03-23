@@ -105,6 +105,7 @@
 @property (nonatomic,strong)  Dateinfo<Optional>     *dateinfo;
 @property (nonatomic,strong)  Dportinfo<Optional>    *dportinfo;
 @property (nonatomic,strong)  Policyinfo<Optional>   *policyinfo;
+@property (nonatomic,strong)  Policyinfo<Optional>   *policyinfo2;
 
 
 @end

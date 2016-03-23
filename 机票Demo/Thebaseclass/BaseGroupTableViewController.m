@@ -90,11 +90,9 @@
     //_groupTable.backgroundColor              = [UIColor yellowColor];
     self.groupTable.tableFooterView = [[UIView alloc]init];
     [_groupTable setSeparatorStyle: UITableViewCellSeparatorStyleNone];
-    _groupTable.showsVerticalScrollIndicator = NO;
+    self.groupTable.contentInset=UIEdgeInsetsMake(-64, 0, 0, 0);
+       _groupTable.showsVerticalScrollIndicator = NO;
     [self.view addSubview:_groupTable];
-    
-    
-    
     
     // Do any additional setup after loading the view.
 }

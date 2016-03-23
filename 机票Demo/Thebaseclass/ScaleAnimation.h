@@ -14,6 +14,13 @@
 @property (nonatomic, assign) UINavigationController *navigationController;
 @property (nonatomic, strong) UIView *viewForInteraction;
 
+
+@property (assign, nonatomic) BOOL reverse;
+
+- (instancetype)initWithView:(UIView*)btnView;
+- (void)stopAnimation;
+
+
 -(instancetype)initWithNavigationController:(UINavigationController *)controller;
 -(void)handlePinch:(UIPinchGestureRecognizer *)pinch;
 

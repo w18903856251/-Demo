@@ -33,7 +33,19 @@
 		FE2FCA491C9BE87F00F2938F /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCA481C9BE87F00F2938F /* checkbox.png */; };
 		FE2FCA4B1C9BE8C800F2938F /* checkboxons.png in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCA4A1C9BE8C800F2938F /* checkboxons.png */; };
 		FE2FCA4E1C9BFD2300F2938F /* PayMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCA4D1C9BFD2300F2938F /* PayMoneyViewController.m */; };
+		FE56579C1C9F99A5007DFB6C /* PayHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE56579B1C9F99A5007DFB6C /* PayHeadView.m */; };
+		FE56579F1C9FA261007DFB6C /* SelectPayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE56579E1C9FA261007DFB6C /* SelectPayCell.m */; };
 		FE6D9E861C966C26001D82DA /* HXNewCustomerSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6D9E851C966C26001D82DA /* HXNewCustomerSectionHeader.m */; };
+		FE707B141CA0F7F300ABDF02 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE707B131CA0F7F300ABDF02 /* SystemConfiguration.framework */; };
+		FE707B161CA0F97C00ABDF02 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE707B151CA0F97C00ABDF02 /* libz.tbd */; };
+		FE707B181CA0F99600ABDF02 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE707B171CA0F99600ABDF02 /* libsqlite3.0.tbd */; };
+		FE707B1A1CA0F9A200ABDF02 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE707B191CA0F9A200ABDF02 /* CoreTelephony.framework */; };
+		FE707B1C1CA0FABD00ABDF02 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE707B1B1CA0FABD00ABDF02 /* libc++.tbd */; };
+		FE707B1F1CA11C7800ABDF02 /* PaySucessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE707B1E1CA11C7800ABDF02 /* PaySucessViewController.m */; };
+		FE707B221CA1211300ABDF02 /* OrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE707B211CA1211300ABDF02 /* OrderListViewController.m */; };
+		FE707B291CA1298A00ABDF02 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE707B281CA1298A00ABDF02 /* CFNetwork.framework */; };
+		FE707B2B1CA1299800ABDF02 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE707B2A1CA1299800ABDF02 /* CoreMotion.framework */; };
+		FE707B2D1CA12A3A00ABDF02 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE707B2C1CA12A3A00ABDF02 /* QuartzCore.framework */; };
 		FE7BE3DB1C92B10F004996B7 /* BaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3DA1C92B10F004996B7 /* BaseAnimation.m */; };
 		FE7BE3DE1C92B521004996B7 /* ModalAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3DD1C92B521004996B7 /* ModalAnimation.m */; };
 		FE7BE3E11C92BB6E004996B7 /* ScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BE3E01C92BB6E004996B7 /* ScaleAnimation.m */; };
@@ -41,10 +53,19 @@
 		FEB03E8E1C9113D500077B67 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E8D1C9113D500077B67 /* BaseViewController.m */; };
 		FEB03E921C9115C700077B67 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E911C9115C700077B67 /* HomepageViewController.m */; };
 		FEB03E951C911EEA00077B67 /* BaseGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB03E941C911EEA00077B67 /* BaseGroupTableViewController.m */; };
+		FEB3BC5D1CA27F4D00629158 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB3BC581CA27F4D00629158 /* libWeChatSDK.a */; };
+		FEB3BC5E1CA27F4D00629158 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB3BC591CA27F4D00629158 /* read_me.txt */; };
+		FEB3BC611CA2836D00629158 /* RefundTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB3BC601CA2836D00629158 /* RefundTicketViewController.m */; };
+		FEB3BC641CA283F700629158 /* ChangeTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB3BC631CA283F700629158 /* ChangeTicketViewController.m */; };
+		FEB3BC671CA2863700629158 /* RefundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB3BC661CA2863700629158 /* RefundTableViewCell.m */; };
 		FEB549C41C89291900F7DFD7 /* SearchTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549C31C89291900F7DFD7 /* SearchTicketViewController.m */; };
 		FEB549C71C892EC300F7DFD7 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549C61C892EC300F7DFD7 /* UIColor+HexString.m */; };
 		FEB549CF1C89665000F7DFD7 /* HYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549CE1C89665000F7DFD7 /* HYSegmentedControl.m */; };
 		FEB549D21C897FC300F7DFD7 /* Conversionofweek.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB549D11C897FC300F7DFD7 /* Conversionofweek.m */; };
+		FEC6D3E11CA2333400AFB184 /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC6D3E01CA2333400AFB184 /* OrderListCell.m */; };
+		FEC6D4F11CA269CA00AFB184 /* OrderInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC6D4F01CA269CA00AFB184 /* OrderInfoViewController.m */; };
+		FEC6D4F41CA26B3300AFB184 /* OrderHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC6D4F31CA26B3300AFB184 /* OrderHeadView.m */; };
+		FEC6D4F71CA26D2D00AFB184 /* OrderInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC6D4F61CA26D2D00AFB184 /* OrderInfoTableViewCell.m */; };
 		FEC8D1CB1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8D1CA1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m */; };
 		FEC8D1CE1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8D1CD1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m */; };
 		FEC8D1D11C8FFF7300357F2A /* UserBookingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8D1D01C8FFF7300357F2A /* UserBookingTableViewCell.m */; };
@@ -129,8 +150,24 @@
 		FE2FCA4A1C9BE8C800F2938F /* checkboxons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkboxons.png; sourceTree = "<group>"; };
 		FE2FCA4C1C9BFD2300F2938F /* PayMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayMoneyViewController.h; sourceTree = "<group>"; };
 		FE2FCA4D1C9BFD2300F2938F /* PayMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayMoneyViewController.m; sourceTree = "<group>"; };
+		FE56579A1C9F99A5007DFB6C /* PayHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayHeadView.h; sourceTree = "<group>"; };
+		FE56579B1C9F99A5007DFB6C /* PayHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayHeadView.m; sourceTree = "<group>"; };
+		FE56579D1C9FA261007DFB6C /* SelectPayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPayCell.h; sourceTree = "<group>"; };
+		FE56579E1C9FA261007DFB6C /* SelectPayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPayCell.m; sourceTree = "<group>"; };
 		FE6D9E841C966C26001D82DA /* HXNewCustomerSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNewCustomerSectionHeader.h; sourceTree = "<group>"; };
 		FE6D9E851C966C26001D82DA /* HXNewCustomerSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNewCustomerSectionHeader.m; sourceTree = "<group>"; };
+		FE707B131CA0F7F300ABDF02 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FE707B151CA0F97C00ABDF02 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FE707B171CA0F99600ABDF02 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		FE707B191CA0F9A200ABDF02 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		FE707B1B1CA0FABD00ABDF02 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FE707B1D1CA11C7800ABDF02 /* PaySucessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySucessViewController.h; sourceTree = "<group>"; };
+		FE707B1E1CA11C7800ABDF02 /* PaySucessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySucessViewController.m; sourceTree = "<group>"; };
+		FE707B201CA1211300ABDF02 /* OrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListViewController.h; sourceTree = "<group>"; };
+		FE707B211CA1211300ABDF02 /* OrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListViewController.m; sourceTree = "<group>"; };
+		FE707B281CA1298A00ABDF02 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FE707B2A1CA1299800ABDF02 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		FE707B2C1CA12A3A00ABDF02 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FE7BE3D91C92B10F004996B7 /* BaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimation.h; sourceTree = "<group>"; };
 		FE7BE3DA1C92B10F004996B7 /* BaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimation.m; sourceTree = "<group>"; };
 		FE7BE3DC1C92B521004996B7 /* ModalAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalAnimation.h; sourceTree = "<group>"; };
@@ -147,6 +184,17 @@
 		FEB03E911C9115C700077B67 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageViewController.m; sourceTree = "<group>"; };
 		FEB03E931C911EEA00077B67 /* BaseGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGroupTableViewController.h; sourceTree = "<group>"; };
 		FEB03E941C911EEA00077B67 /* BaseGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGroupTableViewController.m; sourceTree = "<group>"; };
+		FEB3BC581CA27F4D00629158 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		FEB3BC591CA27F4D00629158 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		FEB3BC5A1CA27F4D00629158 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		FEB3BC5B1CA27F4D00629158 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		FEB3BC5C1CA27F4D00629158 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		FEB3BC5F1CA2836D00629158 /* RefundTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundTicketViewController.h; sourceTree = "<group>"; };
+		FEB3BC601CA2836D00629158 /* RefundTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundTicketViewController.m; sourceTree = "<group>"; };
+		FEB3BC621CA283F700629158 /* ChangeTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeTicketViewController.h; sourceTree = "<group>"; };
+		FEB3BC631CA283F700629158 /* ChangeTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeTicketViewController.m; sourceTree = "<group>"; };
+		FEB3BC651CA2863700629158 /* RefundTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefundTableViewCell.h; sourceTree = "<group>"; };
+		FEB3BC661CA2863700629158 /* RefundTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefundTableViewCell.m; sourceTree = "<group>"; };
 		FEB549C21C89291900F7DFD7 /* SearchTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTicketViewController.h; path = ../SearchTicketViewController.h; sourceTree = "<group>"; };
 		FEB549C31C89291900F7DFD7 /* SearchTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTicketViewController.m; path = ../SearchTicketViewController.m; sourceTree = "<group>"; };
 		FEB549C51C892EC300F7DFD7 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../UIColor+HexString.h"; sourceTree = "<group>"; };
@@ -155,6 +203,14 @@
 		FEB549CE1C89665000F7DFD7 /* HYSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYSegmentedControl.m; sourceTree = "<group>"; };
 		FEB549D01C897FC300F7DFD7 /* Conversionofweek.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversionofweek.h; sourceTree = "<group>"; };
 		FEB549D11C897FC300F7DFD7 /* Conversionofweek.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversionofweek.m; sourceTree = "<group>"; };
+		FEC6D3DF1CA2333400AFB184 /* OrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListCell.h; sourceTree = "<group>"; };
+		FEC6D3E01CA2333400AFB184 /* OrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListCell.m; sourceTree = "<group>"; };
+		FEC6D4EF1CA269CA00AFB184 /* OrderInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfoViewController.h; sourceTree = "<group>"; };
+		FEC6D4F01CA269CA00AFB184 /* OrderInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInfoViewController.m; sourceTree = "<group>"; };
+		FEC6D4F21CA26B3300AFB184 /* OrderHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHeadView.h; sourceTree = "<group>"; };
+		FEC6D4F31CA26B3300AFB184 /* OrderHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHeadView.m; sourceTree = "<group>"; };
+		FEC6D4F51CA26D2D00AFB184 /* OrderInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfoTableViewCell.h; sourceTree = "<group>"; };
+		FEC6D4F61CA26D2D00AFB184 /* OrderInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInfoTableViewCell.m; sourceTree = "<group>"; };
 		FEC8D1C91C8FCAD900357F2A /* ReservationforcustomerinfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationforcustomerinfoViewController.h; sourceTree = "<group>"; };
 		FEC8D1CA1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationforcustomerinfoViewController.m; sourceTree = "<group>"; };
 		FEC8D1CC1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationforcustomerinfoHeadView.h; sourceTree = "<group>"; };
@@ -195,6 +251,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE707B2D1CA12A3A00ABDF02 /* QuartzCore.framework in Frameworks */,
+				FE707B2B1CA1299800ABDF02 /* CoreMotion.framework in Frameworks */,
+				FE707B291CA1298A00ABDF02 /* CFNetwork.framework in Frameworks */,
+				FE707B1C1CA0FABD00ABDF02 /* libc++.tbd in Frameworks */,
+				FEB3BC5D1CA27F4D00629158 /* libWeChatSDK.a in Frameworks */,
+				FE707B1A1CA0F9A200ABDF02 /* CoreTelephony.framework in Frameworks */,
+				FE707B181CA0F99600ABDF02 /* libsqlite3.0.tbd in Frameworks */,
+				FE707B161CA0F97C00ABDF02 /* libz.tbd in Frameworks */,
+				FE707B141CA0F7F300ABDF02 /* SystemConfiguration.framework in Frameworks */,
 				29257439DC23D2B8ABA9591D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +293,14 @@
 		B5EDB217B06A164F96FEAACB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE707B2C1CA12A3A00ABDF02 /* QuartzCore.framework */,
+				FE707B2A1CA1299800ABDF02 /* CoreMotion.framework */,
+				FE707B281CA1298A00ABDF02 /* CFNetwork.framework */,
+				FE707B1B1CA0FABD00ABDF02 /* libc++.tbd */,
+				FE707B191CA0F9A200ABDF02 /* CoreTelephony.framework */,
+				FE707B171CA0F99600ABDF02 /* libsqlite3.0.tbd */,
+				FE707B151CA0F97C00ABDF02 /* libz.tbd */,
+				FE707B131CA0F7F300ABDF02 /* SystemConfiguration.framework */,
 				A715D80CC03760D23CCE06C0 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -335,6 +408,18 @@
 			path = Thebaseclass;
 			sourceTree = "<group>";
 		};
+		FEB3BC571CA27F4D00629158 /* WeiXinPay */ = {
+			isa = PBXGroup;
+			children = (
+				FEB3BC581CA27F4D00629158 /* libWeChatSDK.a */,
+				FEB3BC591CA27F4D00629158 /* read_me.txt */,
+				FEB3BC5A1CA27F4D00629158 /* WechatAuthSDK.h */,
+				FEB3BC5B1CA27F4D00629158 /* WXApi.h */,
+				FEB3BC5C1CA27F4D00629158 /* WXApiObject.h */,
+			);
+			path = WeiXinPay;
+			sourceTree = "<group>";
+		};
 		FEB549C81C8962B000F7DFD7 /* Air tickets Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +437,20 @@
 				FEC8D1CD1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m */,
 				FE2FCA4C1C9BFD2300F2938F /* PayMoneyViewController.h */,
 				FE2FCA4D1C9BFD2300F2938F /* PayMoneyViewController.m */,
+				FE56579A1C9F99A5007DFB6C /* PayHeadView.h */,
+				FE56579B1C9F99A5007DFB6C /* PayHeadView.m */,
+				FE707B1D1CA11C7800ABDF02 /* PaySucessViewController.h */,
+				FE707B1E1CA11C7800ABDF02 /* PaySucessViewController.m */,
+				FE707B201CA1211300ABDF02 /* OrderListViewController.h */,
+				FE707B211CA1211300ABDF02 /* OrderListViewController.m */,
+				FEC6D4EF1CA269CA00AFB184 /* OrderInfoViewController.h */,
+				FEC6D4F01CA269CA00AFB184 /* OrderInfoViewController.m */,
+				FEB3BC5F1CA2836D00629158 /* RefundTicketViewController.h */,
+				FEB3BC601CA2836D00629158 /* RefundTicketViewController.m */,
+				FEB3BC621CA283F700629158 /* ChangeTicketViewController.h */,
+				FEB3BC631CA283F700629158 /* ChangeTicketViewController.m */,
+				FEC6D4F21CA26B3300AFB184 /* OrderHeadView.h */,
+				FEC6D4F31CA26B3300AFB184 /* OrderHeadView.m */,
 			);
 			path = "Air tickets Controller";
 			sourceTree = "<group>";
@@ -365,6 +464,14 @@
 				FEC8D1D01C8FFF7300357F2A /* UserBookingTableViewCell.m */,
 				FEA7D9C41C9A7BA800BDD96F /* FlightSearchCell.h */,
 				FEA7D9C51C9A7BA800BDD96F /* FlightSearchCell.m */,
+				FE56579D1C9FA261007DFB6C /* SelectPayCell.h */,
+				FE56579E1C9FA261007DFB6C /* SelectPayCell.m */,
+				FEC6D3DF1CA2333400AFB184 /* OrderListCell.h */,
+				FEC6D3E01CA2333400AFB184 /* OrderListCell.m */,
+				FEC6D4F51CA26D2D00AFB184 /* OrderInfoTableViewCell.h */,
+				FEC6D4F61CA26D2D00AFB184 /* OrderInfoTableViewCell.m */,
+				FEB3BC651CA2863700629158 /* RefundTableViewCell.h */,
+				FEB3BC661CA2863700629158 /* RefundTableViewCell.m */,
 			);
 			path = "Air tickets Cell";
 			sourceTree = "<group>";
@@ -421,6 +528,7 @@
 		FEDBA7501C87CCD900D1EF64 /* 机票Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FEB3BC571CA27F4D00629158 /* WeiXinPay */,
 				FE2FCA481C9BE87F00F2938F /* checkbox.png */,
 				FE2FCA4A1C9BE8C800F2938F /* checkboxons.png */,
 				FEDBA7541C87CCD900D1EF64 /* AppDelegate.h */,
@@ -594,6 +702,7 @@
 				FE06C45E1C8D2DBA0063BAD3 /* chack.png in Resources */,
 				FEDBA75C1C87CCD900D1EF64 /* Main.storyboard in Resources */,
 				FE2FCA3C1C9BC74A00F2938F /* cancelBtn@2x.png in Resources */,
+				FEB3BC5E1CA27F4D00629158 /* read_me.txt in Resources */,
 				FE2FCA491C9BE87F00F2938F /* checkbox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +779,7 @@
 				FEDBA79C1C88207700D1EF64 /* ListTableViewCell.m in Sources */,
 				FEB03E8E1C9113D500077B67 /* BaseViewController.m in Sources */,
 				FEB549CF1C89665000F7DFD7 /* HYSegmentedControl.m in Sources */,
+				FEB3BC641CA283F700629158 /* ChangeTicketViewController.m in Sources */,
 				FEDBA7961C881AD900D1EF64 /* BaseHandler.m in Sources */,
 				FE06C45F1C8D2DBA0063BAD3 /* NSDate+WQCalendarLogic.m in Sources */,
 				FE7BE3E11C92BB6E004996B7 /* ScaleAnimation.m in Sources */,
@@ -689,20 +799,30 @@
 				FEC8D1CB1C8FCAD900357F2A /* ReservationforcustomerinfoViewController.m in Sources */,
 				FEA7D9C61C9A7BA800BDD96F /* FlightSearchCell.m in Sources */,
 				FE06C45B1C8D2DBA0063BAD3 /* CalendarMonthCollectionViewLayout.m in Sources */,
+				FEB3BC611CA2836D00629158 /* RefundTicketViewController.m in Sources */,
 				FEC8D1D11C8FFF7300357F2A /* UserBookingTableViewCell.m in Sources */,
+				FE56579C1C9F99A5007DFB6C /* PayHeadView.m in Sources */,
+				FE707B221CA1211300ABDF02 /* OrderListViewController.m in Sources */,
 				FE6D9E861C966C26001D82DA /* HXNewCustomerSectionHeader.m in Sources */,
+				FE707B1F1CA11C7800ABDF02 /* PaySucessViewController.m in Sources */,
+				FEC6D4F41CA26B3300AFB184 /* OrderHeadView.m in Sources */,
 				FEB549C71C892EC300F7DFD7 /* UIColor+HexString.m in Sources */,
 				FE06C45A1C8D2DBA0063BAD3 /* CalendarLogic.m in Sources */,
+				FEC6D3E11CA2333400AFB184 /* OrderListCell.m in Sources */,
 				FE06C4581C8D2DBA0063BAD3 /* CalendarDayModel.m in Sources */,
 				FE2FCA4E1C9BFD2300F2938F /* PayMoneyViewController.m in Sources */,
 				FEB03E921C9115C700077B67 /* HomepageViewController.m in Sources */,
+				FE56579F1C9FA261007DFB6C /* SelectPayCell.m in Sources */,
 				FE06C46E1C8D7EED0063BAD3 /* TicketseatHeadView.m in Sources */,
 				FE7BE3DE1C92B521004996B7 /* ModalAnimation.m in Sources */,
 				FEDBA78D1C87DE7D00D1EF64 /* Publicrequest.m in Sources */,
 				FE2FCA421C9BC74A00F2938F /* CustomSearchView.m in Sources */,
+				FEC6D4F71CA26D2D00AFB184 /* OrderInfoTableViewCell.m in Sources */,
 				FE06C45C1C8D2DBA0063BAD3 /* CalendarMonthHeaderView.m in Sources */,
 				FE06C4621C8D460F0063BAD3 /* AppUtils.m in Sources */,
 				FE06C46B1C8D6EC60063BAD3 /* Ticketseat.m in Sources */,
+				FEB3BC671CA2863700629158 /* RefundTableViewCell.m in Sources */,
+				FEC6D4F11CA269CA00AFB184 /* OrderInfoViewController.m in Sources */,
 				FEC8D1CE1C8FEE8000357F2A /* ReservationforcustomerinfoHeadView.m in Sources */,
 				FE06C4571C8D2DBA0063BAD3 /* CalendarDayCell.m in Sources */,
 				FE06C4651C8D4A1F0063BAD3 /* UIView+frame.m in Sources */,
@@ -841,11 +961,48 @@
 			baseConfigurationReference = 3A5FE8D763D18DE5FD29C0DD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/机票Demo/NetWork/Payment",
+					tool/IOS,
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/Three,
+					parties/ZhiFuBaoPay,
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/Three,
+					parties/ZhiFuBaoPay,
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/Three,
+					parties/ZhiFuBaoPay,
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/Three,
+					parties/ZhiFuBaoPay,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "机票Demo/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+				);
 				INFOPLIST_FILE = "机票Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/WeiXinPay,
+					"$(PROJECT_DIR)/机票Demo/WeiXinPay",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wuyu.zhangqian.--Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -856,11 +1013,48 @@
 			baseConfigurationReference = 499662CD6D38D4DDB5CDFF20 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/机票Demo/NetWork/Payment",
+					tool/IOS,
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/Three,
+					parties/ZhiFuBaoPay,
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/Three,
+					parties/ZhiFuBaoPay,
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/Three,
+					parties/ZhiFuBaoPay,
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/Three,
+					parties/ZhiFuBaoPay,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "机票Demo/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+				);
 				INFOPLIST_FILE = "机票Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/机票Demo/My",
+					wrapper,
+					class/WeiXinPay,
+					"$(PROJECT_DIR)/机票Demo/WeiXinPay",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wuyu.zhangqian.--Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

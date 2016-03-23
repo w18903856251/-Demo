@@ -33,7 +33,7 @@
 
     
     self.groupTable.delegate = self;
-    self.groupTable.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64);
+    self.groupTable.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64);
     [self.groupTable registerClass:[TicketseatCell class] forCellReuseIdentifier:kTicketCellIdentifier];
     
    

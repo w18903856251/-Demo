@@ -40,13 +40,15 @@
     
     self.groupTable.delegate = self;
     self.groupTable.dataSource =self;
-    self.groupTable.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    self.groupTable.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64);
     [self.groupTable registerClass:[UserBookingTableViewCell class] forCellReuseIdentifier:kUserBookingTableViewCellIdentifier];
     [self.groupTable registerClass:[HXNewCustomerSectionHeader class] forHeaderFooterViewReuseIdentifier:kNewCustomerSectionHeaderIdentifier];
     [self.groupTable registerClass:[UserInsuranceTableViewCell class] forCellReuseIdentifier:kUserInsuranceTableViewCellIdentifier];
      [self.groupTable registerClass:[UserReimbursementTableViewCell class] forCellReuseIdentifier:kUserReimbursementTableViewCellIdentifier];
     
     [self.groupTable registerClass:[UserPayMoneyTableViewCell class] forCellReuseIdentifier:kUserPayMoneyTableViewCellIdentifier];
+    
+
     
     //*
 //    TicketseatHeadView  *SeatHeader = [[TicketseatHeadView alloc] initWithFrame:CGRectMake(0.f,0.f,self.view.width,[TicketseatHeadView calculateCellHeight])];
@@ -367,7 +369,7 @@
 -(void) PayMoneyVC{
     
     PayMoneyViewController * paymoney = [[PayMoneyViewController alloc]init];
-    
+    paymoney.obj = _objData;
     [self pushViewController:paymoney];
     
 }

@@ -46,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
+    
     self.navigationItem.title = @"上海 - 天津";
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -62,7 +62,7 @@
     [AButton addTarget:self action:@selector(BeforeChick:) forControlEvents:UIControlEventTouchUpInside];
     [backview addSubview:AButton];
     
-     Alabel = [[UILabel alloc]initWithFrame:CGRectMake(AButton.right, 10, (SCREEN_WIDTH-30)/3, 20)];
+    Alabel = [[UILabel alloc]initWithFrame:CGRectMake(AButton.right, 10, (SCREEN_WIDTH-30)/3, 20)];
     Alabel.font =[UIFont systemFontOfSize:12];
     NSDate *currentDate = [NSDate date];//获取当前时间，日期
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -77,7 +77,7 @@
     
     //[Alabel setTitle:[NSString stringWithFormat:@"%@  %@",dateString,date]  forState: UIControlStateNormal];
     
-   // Alabel.backgroundColor = [UIColor blackColor];
+    // Alabel.backgroundColor = [UIColor blackColor];
     
     [backview addSubview:Alabel];
     
@@ -98,10 +98,10 @@
     self.navigationController.delegate =self;
     self.groupTable.delegate = self;
     
-    self.groupTable.frame = CGRectMake(15, 45, SCREEN_WIDTH-30, SCREEN_HEIGHT-64);
+    self.groupTable.frame = CGRectMake(15, label.bottom+5, SCREEN_WIDTH-30, SCREEN_HEIGHT-64);
     [self.groupTable registerClass:[ListTableViewCell class] forCellReuseIdentifier:kListCellIdentifier];
     
-   
+    
     //[_dataDelegate addModels:b];
     
     _dataDelegate = [[BaseGroupTableViewController alloc] initWithIdentifier:kListCellIdentifier configureBlock:^(ListTableViewCell* cell, id model, NSIndexPath *indexPath) {
@@ -118,15 +118,24 @@
     self.groupTable.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadNewData];
     }];
-   
+    
     
 }
+
+//- (ScaleAnimation *)login
+//{
+//    if (!_scaleAnimationController) {
+//        _scaleAnimationController = [[ScaleAnimation alloc] initWithView:self.btn];
+//    }
+//    return _login;
+//}
+
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-   
+    
     
     airlineseat = [[AirlineseatViewController alloc]init];
     
@@ -135,7 +144,7 @@
     
     //  自定义转场动画效果
     
-   _scaleAnimationController.viewForInteraction = airlineseat.view;
+    _scaleAnimationController.viewForInteraction = airlineseat.view;
     
     [self pushViewController:airlineseat];
     
@@ -164,13 +173,13 @@
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
-        [formatter setDateFormat:@"yyyy-MM-dd"];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
     
-        NSDate *date = [formatter dateFromString:dateString];
+    NSDate *date = [formatter dateFromString:dateString];
     
-        NSDate *yesterday = [NSDate dateWithTimeInterval:-60  * 60 * 24 sinceDate:date];
+    NSDate *yesterday = [NSDate dateWithTimeInterval:-60  * 60 * 24 sinceDate:date];
     
-       //NSDate *tomorrow = [NSDate dateWithTimeInterval:60 * index* 60 * 24 sinceDate:date];
+    //NSDate *tomorrow = [NSDate dateWithTimeInterval:60 * index* 60 * 24 sinceDate:date];
     
     NSString * dates= [Conversionofweek weekdayStringFromDate:yesterday];
     
@@ -211,20 +220,20 @@
 #pragma mark - /***     网络请求     ****/
 - (void)requestTicketlistDatas
 {
-     __weak __typeof(self) weakSelf = self;
-     NSMutableDictionary   *Ticketlist;
+    __weak __typeof(self) weakSelf = self;
+    NSMutableDictionary   *Ticketlist;
     Ticketlist  = [NSMutableDictionary dictionaryWithCapacity:0];
     
     [Publicrequest requestTicketlistWithParameters:Ticketlist success:^(id obj) {
         
-       
+        
         TicketListEntity  *buyEntity = (TicketListEntity *)obj;
         //weakSelf.dataSource = [NSMutableArray arrayWithArray:buyEntity.retData];
         
-         [_dataDelegate addModels:buyEntity.retData];
+        [_dataDelegate addModels:buyEntity.retData];
         
         debugLog(@"model==%@",_dataDelegate.dataSource);
-       //[weakSelf.dataSource addObject:buyEntity.retData];
+        //[weakSelf.dataSource addObject:buyEntity.retData];
         [weakSelf.groupTable reloadData];
         
     } fail:^(id obj) {
@@ -241,7 +250,7 @@
     
     self.currentPage = 1;
     self.isTableRefreshing = YES;
-     __weak __typeof(self) weakSelf = self;
+    __weak __typeof(self) weakSelf = self;
     NSMutableDictionary   *stockCar  = [NSMutableDictionary dictionaryWithCapacity:0];
     //[stockCar setObject:@(self.currentPage) forKey:@"currPage"];
     
@@ -265,70 +274,68 @@
     } complete:^(id obj) {
         
     }];
-
-
-
+    
+    
+    
 }
-     
+
 - (void)loadMoreData {
-         
-         self.currentPage = 1;
-         self.isTableRefreshing = YES;
-         __weak __typeof(self) weakSelf = self;
-         NSMutableDictionary   *stockCar  = [NSMutableDictionary dictionaryWithCapacity:0];
-         //[stockCar setObject:@(self.currentPage) forKey:@"currPage"];
-         
-         
-         [Publicrequest requestTicketlistWithParameters:stockCar success:^(id obj) {
-             
-             weakSelf.isTableRefreshing = NO;
-             TicketListEntity  *buyEntity = (TicketListEntity *)obj;
-            // weakSelf.dataSource = [NSMutableArray arrayWithArray:buyEntity.retData];
-             
-             [_dataDelegate addModels:buyEntity.retData];
-             
-             [weakSelf.dataSource addObject:buyEntity.retData];
-             [weakSelf.groupTable reloadData];
-             [weakSelf.groupTable.footer endRefreshing];
-             
-                                           
-            } fail:^(id obj) {
-                                               
-            } complete:^(id obj) {
-                                               
-            }];
-             
-             
-             
-         }
+    
+    self.currentPage = 1;
+    self.isTableRefreshing = YES;
+    __weak __typeof(self) weakSelf = self;
+    NSMutableDictionary   *stockCar  = [NSMutableDictionary dictionaryWithCapacity:0];
+    //[stockCar setObject:@(self.currentPage) forKey:@"currPage"];
+    
+    
+    [Publicrequest requestTicketlistWithParameters:stockCar success:^(id obj) {
+        
+        weakSelf.isTableRefreshing = NO;
+        TicketListEntity  *buyEntity = (TicketListEntity *)obj;
+        // weakSelf.dataSource = [NSMutableArray arrayWithArray:buyEntity.retData];
+        
+        [_dataDelegate addModels:buyEntity.retData];
+        
+        [weakSelf.dataSource addObject:buyEntity.retData];
+        [weakSelf.groupTable reloadData];
+        [weakSelf.groupTable.footer endRefreshing];
+        
+        
+    } fail:^(id obj) {
+        
+    } complete:^(id obj) {
+        
+    }];
+    
+    
+    
+}
 
 
--(id)
-animationControllerForPresentedController:(UIViewController
-                                           *)presented presentingController:(UIViewController
-                                                                             *)presenting sourceController:(UIViewController *)source {
-    _modalAnimationController.type = AnimationTypePresent;
-    return _modalAnimationController;
-}
--(id)
-animationControllerForDismissedController:(UIViewController
-                                           *)dismissed { 
-    _modalAnimationController.type = AnimationTypeDismiss;
-    return _modalAnimationController;
-}
+//-(id)
+//animationControllerForPresentedController:(UIViewController
+//                                           *)presented presentingController:(UIViewController
+//                                                                             *)presenting sourceController:(UIViewController *)source {
+//    _modalAnimationController.type = AnimationTypePresent;
+//    return _modalAnimationController;
+//}
+//-(id)
+//animationControllerForDismissedController:(UIViewController
+//                                           *)dismissed {
+//    _modalAnimationController.type = AnimationTypeDismiss;
+//    return _modalAnimationController;
+//}
 
 //  自定义动画效果
 #pragma mark - Navigation Controller Delegate
 
 -(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
     
-    
-    
     BaseAnimation *animationController;
-   
-       animationController = _scaleAnimationController;
     
-
+    animationController = _scaleAnimationController;
+    
+    
     switch (operation) {
         case UINavigationControllerOperationPush:
             animationController.type = AnimationTypePresent;
